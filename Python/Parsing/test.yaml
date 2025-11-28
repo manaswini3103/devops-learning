@@ -1,0 +1,30 @@
+---
+UserName: GeeksforGeeks
+Password: GFG@123
+Phone: 1234567890
+Website: geeksforgeeks.org
+Skills:
+  -Python
+  -SQL
+  -Django
+  -JavaScript
+---
+UserName: Google
+Password: google@123
+Phone: 1234567890
+Website: google.com
+Skills:
+  -Python
+  -SQL
+  -Django
+  -JavaScript
+---
+UserName: Yahoo
+Password: yahoo@123
+Phone: 1234567890
+Website: yahoo.com
+Skills:
+  -Python
+  -SQL
+  -Django
+  -JavaScript
