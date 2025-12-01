@@ -3,10 +3,7 @@
 In Linux, everything is organized in a single tree-like structure that starts from the **root directory (/)**.  
 All directories and files appear under it as branches.
 
----
-
 ## Important Directories in Linux
-
 - **/** – The root directory (similar to `C:\` in Windows)
 - **/root** – Home directory for the root (administrative) user
 - **/home** – Home directories for regular users
@@ -20,17 +17,13 @@ All directories and files appear under it as branches.
 - **/tmp** – Temporary files
 - **/media** – Mount point for removable storage devices
 
----
-
 ## Configuration Files
-
 Configuration files are typically plain-text files that contain instructions, settings, and values for programs, utilities, and system processes.
 
 ### Common Examples:
-
 - **/etc/fstab** – Defines file systems to be mounted at boot  
 - **/etc/network/interfaces** *(or Netplan YAML files on newer systems)* – Configures network interfaces  
 - **/etc/ssh/sshd_config** – Configuration for the SSH daemon  
-- **Application-specific configuration files**, e.g.:  
-  - `~/.bashrc` – User-specific shell settings
+- **Application-specific configuration files**
+ex:  `~/.bashrc` – User-specific shell settings
 
