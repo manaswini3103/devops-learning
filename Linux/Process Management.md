@@ -2,14 +2,14 @@
 - When you start a program or run an application in Linux, it runs as a program.
 - A Linux process (a daemon), running in foreground or in the background uses memory and CPU resources.
 
-**Command**                            **Description**
-ps -ef                      list the process which are running in the system
-                                e – show every process of all users
-                                f – use full format listing             
-kill/kill -9                kills a process or service
-fg                          run the program in foreground ex: fg %1
-bg                          runs the service in the back group ex: bg %2
-top                         list top 20 process which are consuming more CPU
+**Command**                            **Description**  
+**ps -ef**                      list the process which are running in the system  
+                                e – show every process of all users  
+                                f – use full format listing      
+**kill/kill -9**                kills a process or service  
+**fg**                          run the program in foreground ex: fg %1  
+**bg**                          runs the service in the back group ex: bg %2  
+**top**                         list top 20 process which are consuming more CPU  
 - ps -ef: like task manager
 [root@omega html]# ps -ef
 UID         PID   PPID  C STIME TTY          TIME CMD

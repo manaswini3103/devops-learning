@@ -1,18 +1,18 @@
 # Services
-**service** - this controls the starting and stopping of services/applications. If we install any application and if we want to start or stop the application, service is used.
+**service** - this controls the starting and stopping of services/applications. If we install any application and if we want to start or stop the application, service is used.  
 **chkconfig** - this controls which services are set to start on boot. If we want to start out services while starting our system itself.
 
 - We can give systemctl or service we’ll get the same result.
 #systemctl status http
-#service <name of the service> status – to check status of the service
-#service <name of the service> start    – to start the service
-#service <name of the service> stop    – to stop the service
-#service <name of the service> reload – to reload the service, reread the configuration of the service. Each service has at least one configuration.
-#service <name of the service> restart – to restart the service, stops the existing connections.
+#service `<name of the service>` status  : to check status of the service
+#service `<name of the service>` start   : to start the service
+#service `<name of the service>` stop    : to stop the service
+#service `<name of the service>` reload  : to reload the service, reread the configuration of the service. Each service has at least one configuration.
+#service `<name of the service>` restart : to restart the service, stops the existing connections.
 
-#chkconfig –list                       – to check availability of the service
-#chkconfig <service> on        – to make the service available after restart
-#chkconfig <service> off        – to make the service unavailable after restart
+#chkconfig –list            : to check availability of the service
+#chkconfig `<service>` on   : to make the service available after restart
+#chkconfig `<service>` off  : to make the service unavailable after restart
 - If we want to check service for http, first we can install it
 yum install httpd -y
 service httpd status (if it’s inactive we can start the service)

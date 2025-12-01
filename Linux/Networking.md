@@ -69,33 +69,35 @@ in the below screen shot, in state column if there is LISTEN, which means those 
 7. **curl** - access the application as from browser
 - once if we deploy the application and wanted to check from our local system whether it is accessible or not.
 [root@omega chennasa]# curl google.com
+``` HTML
 <HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
 <TITLE>301 Moved</TITLE></HEAD><BODY>
 <H1>301 Moved</H1>
 The document has moved
 <A HREF="http://www.google.com/">here</A>.
 </BODY></HTML>
+```
 
 8. **SSH** – The SSH (secure Shell) protocol is a method for secure remote login from once computer to another. It provides several alternative options for strong authentication, and it protects the communications securely and integrity with strong encryption.
-port number      : 22
-Daemon/process   : sshd
-Conf file        : /etc/ssh/sshd_config
+port number      : 22  
+Daemon/process   : sshd  
+Conf file        : /etc/ssh/sshd_config  
 
-**how it works** 
+**how it works**  
 If we want to login from server1 to server2, we need key to login to it. We’ll have private (id is “id_rsa” stored in $HOME/.ssh/id_rsa) and public (id is “id_rsa.pub” stored in $HOME/.ssh/authorized_keys) keys. Anyone can know our public key but shouldn’t know our private key.
 
 **Steps**
 1. **how to generate key**
-We generate key in server1
+- We generate key in server1
 - #ssh-keygen (or) #ssh-keygen -t rsa -b 4096/2048
 - keys are generated in .ssh dir under user’s home directory.
 2. **where to store it**
 - We will copy the public key from Server1 to Server2 in the .ssh directory (file: authorized_keys) under the user’s home directory. This can be done in two ways:
-   1. Manually:
+   1. **Manually**:
 Open the authorized_keys file on Server2 using vi and paste the public key from Server1:
 vi $HOME /.ssh/authorized_keys
 here $HOME is the user, if we want the key to be copied to /root user then the name should be “$ROOT/.ssh/authorized_keys”.
-   2. Using ssh-copy-id:
+   2. **Using ssh-copy-id**:
 Run the following command from Server1 to copy the public key automatically:
 ssh-copy-id <IP_Address_of_Server2>
 3. **how to use it**
@@ -107,8 +109,8 @@ ex: ssh -i /root/.ssh/id_rsa root@ip-add
 
 9. **SCP** – SCP(secure copy) is a command-line utility that allows you to securely copy files and directories between two systems/servers.
 - for Windows to Linux copying we use tools such as “Mobaxterm” or “winscp”
-- for Linux to Linx
-**syn**: scp source_file_name username@destination_host:destination_folder
+- for Linux to Linx  
+**syn**: scp source_file_name username@destination_host:destination_folder  
 **ex**: scp file1 root@10.20.30.40:/tmp/
       scp root@10.20.30.40:/tmp/file2 /home/ec2-user/
       scp -r src root@10.20.30.40:/tmp/ (-r : for copying directories)

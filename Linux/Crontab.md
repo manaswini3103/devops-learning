@@ -1,18 +1,17 @@
 # Crontab
 
-Fiels	Description	    Allowed value
-MIN  	Minute field	0 to 59
-HOUR	Hour field	    0 to 23
-DOM	  Day of the month	1-31
-MON	    Month field	    1-12
-DOW	   Day of the week	0-6
-CMD		Any command
+Fiels	Description	    Allowed value<br>
+MIN  	Minute field	0 to 59  
+HOUR	Hour field	    0 to 23  
+DOM	  Day of the month	1-31  
+MON	    Month field	    1-12  
+DOW	   Day of the week	0-6  
+CMD		Any command  
 
 In any operating system, it is possible to create jobs that you want to reoccur. This process is known as job scheduling, it is usually done based on user-defined jobs. For RedHat or any other Linux, this process is handled by the cron service or a daemon called “crond”, which can be used to schedule tasks. Each user can create a cron job.
 
 ## commands
-**crontab -l** (lists the cron jobs running)
-
+**crontab -l** (lists the cron jobs running)<br>
 **crontab -e** (we can add a cron job using this command where e – edit)
 
 - Execute a job at 8:30 on everyday morning

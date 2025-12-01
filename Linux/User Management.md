@@ -2,8 +2,7 @@
 
 ## User roles and sudo
 - Linux is a multi-user environment
-**su** : we can switch between users (set user, switch user or substitute user).
-to switch the user we must know that user password.
+- **su** : we can switch between users (set user, switch user or substitute user).To switch the user we must know that user password.
 - User Roles:
 **Normal user**: modify their own files, cannot make system changes
 **Super user**: modify any file, make system changes
@@ -42,27 +41,32 @@ In linux there are 5 types of users
 - **syn**: useradd <option> <username>
 
 ## options for modifying user
-u to change user id, -aG secondary group id (we use this during docker setup, we should add user to a docker group), -g to change primary group id, -d to change home directory, -c comment, -s shell
-[root@omega home]# useradd john
-[root@omega home]# useradd mark
-[root@omega home]# id john  (to get user id, group id)
-[root@omega home]# usermod -aG john mark (adds mark to the john group)
-[root@omega home]# id mark
-[root@omega home]# passwd john
-[root@omega home]# cat /etc/passwd
-[root@omega home]# usermod -u new_id username
+- u to change user id
+- -aG secondary group id (we use this during docker setup, we should add user to a docker group)
+- -g to change primary group id
+- -d to change home directory
+- -c comment
+- -s shell
+[root@omega home]# useradd john  
+[root@omega home]# useradd mark  
+[root@omega home]# id john  (to get user id, group id)  
+[root@omega home]# usermod -aG john mark (adds mark to the john group)  
+[root@omega home]# id mark  
+[root@omega home]# passwd john  
+[root@omega home]# cat /etc/passwd  
+[root@omega home]# usermod -u new_id username  
 [root@omega home]# userdel -r username (-r deletes the users home directory)
 
 ## Common issues in User Management:
 1. Forgotten password: sudo passwd username
-2. Account lockouts: multiple failed login attempts 
-sudo usermod -U username (-U unlocks the specified user)
-3. Security Vulnerability: outdated systems can be suspected to security threats.
-sudo apt update && sudo apt upgrade. 
-4. When we tried to login to that user it’ll ask for key instead of password. So, we’ll make some changes to ask for password in default configuration.
-[root@omega home]# nano /etc/ssh/sshd_config (or) vi /etc/ssh/sshd_config
+2. Account lockouts: multiple failed login attempts  
+8*sudo usermod -U username** (-U unlocks the specified user)
+3. Security Vulnerability: outdated systems can be suspected to security threats.  
+**sudo apt update && sudo apt upgrade**
+4. When we tried to login to that user it’ll ask for key instead of password. So, we’ll make some changes to ask for password in default configuration.  
+[root@omega home]# nano /etc/ssh/sshd_config (or) vi /etc/ssh/sshd_config  
 a file will be opened in editor mode, there we need to check for text “PasswordAuthentication no”.
-5. We need to change that to “PasswordAuthentication yes”
-When we update configurations, we need to update our services
-[root@omega home]# service sshd reload
+5. We need to change that to “PasswordAuthentication yes”  
+When we update configurations, we need to update our services  
+[root@omega home]# service sshd reload  
 6. Then we’ll login with the new user which we created, by taking the IP from EC2 instance we created and give in new session.
