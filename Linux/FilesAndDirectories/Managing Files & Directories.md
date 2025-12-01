@@ -30,7 +30,7 @@ Find the files or directory's path. It's exactly like the find option in windows
 [root@omega chennasa]# find . -name *.txt  
 ./filename.txt  
 
-**options**
+### options
 - name "pattern" - Searches files by name (case-sensitive).ex: find ~ -name "notes.txt"
 - iname "pattern" - Case-insensitive name search.ex: find ~ -iname "notes.*"
 - type f/d - Finds only files (f) or directories (d).ex: find /var/log -type f

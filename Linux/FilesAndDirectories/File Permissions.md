@@ -22,33 +22,36 @@ I  : Link files (short cut)
 
 ## Two methods to represent permission
 1. Octal File Permissions  
-	  Read (4) Write (2) Execute (1) Result  
-User	R	      w	         x	     7 (4+2+1)  
-Group	R	      -	         x       5 (4+1)  
-Others	R	      -	         -	     4 (4)  
+| Type   | Read (4) | Write (2) | Execute (1) | Result      |
+|--------|----------|-----------|-------------|-------------|
+| User   | R        | w         | x           | 7 (4+2+1)   |
+| Group  | R        | -         | x           | 5 (4+1)     |
+| Others | R        | -         | -           | 4 (4)       | 
 
 2. Symbolic File permissions  
-	       Read (r)	Write (w) Execute (x)	Result  
-User(u)	       +	   +	      +	        u + rwx  
-Group(g)	   =	   -	      -	        g=r  
-Others(o)	   -	   -	      -	        o - rwx  
-All(a)				
+| Type        | Read (r) | Write (w) | Execute (x) | Result      |
+|-------------|----------|-----------|-------------|-------------|
+| User (u)    | +        | +         | +           | u = rwx     |
+| Group (g)   | =        | -         | -           | g = r       |
+| Others (o)  | -        | -         | -           | o = ---     |
+| All (a)     |          |           |             |             |		
 **‘+’** adds permissions, **‘-‘** removes permissions, **‘=’** adds specified permission but removes others.
 
 ### Comparing Octal and Symbolic Values:  
-OctalValue	 SymbolicValue	        Result  
-777	           a + rwx	            rwxrwxrwx  
-755	        u + rwx, g=rx, o=rx     rwxr-xr-x  
-644	          u=rw, g=r, o=r	    rw-r--r--  
-700	     u + rwx, g – rwx, o – rwx	rwx------  
+| Octal Value | Symbolic Value              | Result      |
+|-------------|------------------------------|-------------|
+| 777         | a + rwx                       | rwxrwxrwx   |
+| 755         | u = rwx, g = rx, o = rx       | rwxr-xr-x   |
+| 644         | u = rw, g = r, o = r          | rw-r--r--   |
+| 700         | u = rwx, g = ---, o = ---     | rwx------   |  
 
 ### Symbolic value changes:  
-Original	SymbolicValue	Result  
-rw-r--r--	a + x	        rwxr-xr-x  
-rwxrwxrwx	g=w, o=r	    rwx-w-r--  
-rwxr–xr–x	o – rx	        rwxr-x---  
-rwxrwxrwx	a – x	        rw-rw-rw-  
-
+| Original     | Symbolic Value | Result      |
+|--------------|----------------|-------------|
+| rw-r--r--    | a + x          | rwxr-xr-x   |
+| rwxrwxrwx    | g = w, o = r   | rwx-w-r--   |
+| rwxr-xr-x    | o - rx         | rwxr-x---   |
+| rwxrwxrwx    | a - x          | rw-rw-rw-   |
 **Ex:**  
 **chmod u+x,g-w,o=w filename**  
 **chmod 777 filename**  

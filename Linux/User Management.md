@@ -3,23 +3,23 @@
 ## User roles and sudo
 - Linux is a multi-user environment
 - **su** : we can switch between users (set user, switch user or substitute user).To switch the user we must know that user password.
-- User Roles:
-**Normal user**: modify their own files, cannot make system changes
-**Super user**: modify any file, make system changes
+- User Roles  
+**Normal user**: modify their own files, cannot make system changes  
+**Super user**: modify any file, make system changes  
 - **sudo**: do something as a superuser temporarily.
- - We need to know our password to login. Only, works if you are allowed in /etc/sudoers.
- - And after we are done it’s good to use ‘sudo -k’ to give up those privileges.
- - You stay yourself just the command runs as root.
+    - We need to know our password to login. Only, works if you are allowed in /etc/sudoers.
+    - And after we are done it’s good to use ‘sudo -k’ to give up those privileges.
+    - You stay yourself just the command runs as root.
 - **sudo su**: Become root using your own password
- - First, sudo runs as root (using your password).
- - Then it executes su, which switches to root.
- - We become root, but don’t load roots full environment.
+    - First, sudo runs as root (using your password).
+    - Then it executes su, which switches to root.
+    - We become root, but don’t load roots full environment.
 - **sudo su -**: Become root and load root’s full environment.
- - The dash (-) means login shell, like root logged in directly.
- - Loads root’s PATH
- - Loads root’s HOME (/root)
- - Loads root’s login files (.profile, .bashrc, etc.)
- - Behaves exactly like logging in as root
+    - The dash (-) means login shell, like root logged in directly.
+    - Loads root’s PATH
+    - Loads root’s HOME (/root)
+    - Loads root’s login files (.profile, .bashrc, etc.)
+    - Behaves exactly like logging in as root
 
 ## Types of users
 In linux there are 5 types of users
@@ -60,7 +60,7 @@ In linux there are 5 types of users
 ## Common issues in User Management:
 1. Forgotten password: sudo passwd username
 2. Account lockouts: multiple failed login attempts  
-8*sudo usermod -U username** (-U unlocks the specified user)
+**sudo usermod -U username** (-U unlocks the specified user)
 3. Security Vulnerability: outdated systems can be suspected to security threats.  
 **sudo apt update && sudo apt upgrade**
 4. When we tried to login to that user it’ll ask for key instead of password. So, we’ll make some changes to ask for password in default configuration.  

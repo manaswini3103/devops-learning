@@ -3,11 +3,11 @@
 - Logs will be stored in /var/log it’s the mail path.
 
 ## Common Log Files in Linux
-**/var/log/syslog**  : General system messages and events.
-**/var/log/auth.log**: Authentication and login-related events.
-**/var/log/kern.log**: Kernel-related messages.
-**/var/log/boot.log**: Boot-time messages.
-**/var/log/dmesg**   : Hardware and kernel ring buffer messages.
+- **/var/log/syslog**  : General system messages and events.
+- **/var/log/auth.log**: Authentication and login-related events.
+- **/var/log/kern.log**: Kernel-related messages.
+- **/var/log/boot.log**: Boot-time messages.
+- **/var/log/dmesg**   : Hardware and kernel ring buffer messages.
 
 ## Log Management Tools in Linux
 Linux provides several built-in tools to manage logs effectively:
@@ -23,9 +23,9 @@ Linux provides several built-in tools to manage logs effectively:
 4.	journalctl (used to view and manage system logs)  
 **syn**: journalctl [options] [unit]  
 **ex**:
-sudo journalctl -r               (to reverse the order)  
-sudo journalctl -n 2             (displays 2 log entries)  
-sudo journalctl | grep Centaur   (filtering by keyword)  
-sudo journalctl -u apache2       (filtering by specific user)  
-journalctl --help                (help section of journalctl)  
-journalctl -p warning            (display on  desired priority level ex emerg, alert, err, info, warning, notice, etc)
+- sudo journalctl -r               (to reverse the order)  
+- sudo journalctl -n 2             (displays 2 log entries)  
+- sudo journalctl | grep Centaur   (filtering by keyword)  
+- sudo journalctl -u apache2       (filtering by specific user)  
+- journalctl --help                (help section of journalctl)  
+- journalctl -p warning            (display on  desired priority level ex emerg, alert, err, info, warning, notice, etc)
