@@ -12,6 +12,7 @@ In any operating system, it is possible to create jobs that you want to reoccur.
 
 ## commands
 **crontab -l** (lists the cron jobs running)
+
 **crontab -e** (we can add a cron job using this command where e – edit)
 
 - Execute a job at 8:30 on everyday morning
