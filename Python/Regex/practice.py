@@ -1,4 +1,4 @@
-#re.search()
+'''#re.search()
 #ex1
 import re
 text = "The quick brown fox."
@@ -20,7 +20,8 @@ import re
 string = """Hello my Number is 123456789 and
             my friend's number is 987654321"""            
 match = re.findall(r'\d+', string) #\d+ to find all sequences of one or more digits in the given string
-print(match)
+match1=re.search(r'\d+',string)
+print(match, match1.group(0))
 
 #re.compile()
 #ex1
@@ -54,4 +55,27 @@ print(re.sub(r'\sAND\s', ' & ', 'Baked Beans And Spam', flags=re.IGNORECASE))
 #re.escape()
 import re
 print(re.escape("This is Awesome even 1 AM"))
-print(re.escape("I Asked what is this [a-9], he said \t ^WoW"))
+print(re.escape("I Asked what is this [a-9], he said \t ^WoW"))'''
+
+#re.match()
+import re
+s="Python_3"
+pattern=r"^[A-Za-z0-9_]"
+if re.match(pattern,s):
+    print("valid string")
+else:
+    print("invalid string")
+
+s1="Hello-World"
+invalid=re.search(r"[a-zA-Z]",s1)
+if invalid:
+    print("invalid string")
+else:
+    print("valid string")
+
+s2="Hello-World!@#"
+invalid=re.findall(r"[^a-zA-Z0-9]",s2)
+if invalid:
+    print("invalid string",invalid)
+else:
+    print("valid string")

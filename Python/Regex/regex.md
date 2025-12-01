@@ -26,6 +26,10 @@ These are sequences that represent common character sets. Examples include:
 - \W: Matches any non-word character.
 - \s: Matches any whitespace character.
 - \S: Matches any non-whitespace character.
+- \A: Matches if the string begins with the given character.
+- \b: Matches if the word begins or ends with the given character. \b(string) will check for the beginning of the word and (string)\b will check for the ending of the word.
+- \B: It is the opposite of the \b i.e. the string should not start or end with the given regex.
+- \z: Matches if the string ends with the given regex.
 
 ## Regex Functions
 **1. re.search(pattern, string)**
