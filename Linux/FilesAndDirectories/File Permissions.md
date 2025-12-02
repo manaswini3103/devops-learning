@@ -21,20 +21,23 @@ d  : directory
 I  : Link files (short cut)  
 
 ## Two methods to represent permission
-1. Octal File Permissions  
+1. Octal File Permissions
+
 | Type   | Read (4) | Write (2) | Execute (1) | Result      |
 |--------|----------|-----------|-------------|-------------|
 | User   | R        | w         | x           | 7 (4+2+1)   |
 | Group  | R        | -         | x           | 5 (4+1)     |
 | Others | R        | -         | -           | 4 (4)       | 
 
-2. Symbolic File permissions  
+2. Symbolic File permissions
+
 | Type        | Read (r) | Write (w) | Execute (x) | Result      |
 |-------------|----------|-----------|-------------|-------------|
 | User (u)    | +        | +         | +           | u = rwx     |
 | Group (g)   | =        | -         | -           | g = r       |
 | Others (o)  | -        | -         | -           | o = ---     |
-| All (a)     |          |           |             |             |		
+| All (a)     |          |           |             |             |
+
 **‘+’** adds permissions, **‘-‘** removes permissions, **‘=’** adds specified permission but removes others.
 
 ### Comparing Octal and Symbolic Values:  
@@ -52,6 +55,7 @@ I  : Link files (short cut)
 | rwxrwxrwx    | g = w, o = r   | rwx-w-r--   |
 | rwxr-xr-x    | o - rx         | rwxr-x---   |
 | rwxrwxrwx    | a - x          | rw-rw-rw-   |
+
 **Ex:**  
 **chmod u+x,g-w,o=w filename**  
 **chmod 777 filename**  

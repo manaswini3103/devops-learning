@@ -111,6 +111,6 @@ ex: ssh -i /root/.ssh/id_rsa root@ip-add
 - for Windows to Linux copying we use tools such as “Mobaxterm” or “winscp”
 - for Linux to Linx  
 **syn**: scp source_file_name username@destination_host:destination_folder  
-**ex**: scp file1 root@10.20.30.40:/tmp/
-      scp root@10.20.30.40:/tmp/file2 /home/ec2-user/
+**ex**: scp file1 root@10.20.30.40:/tmp/  
+      scp root@10.20.30.40:/tmp/file2 /home/ec2-user/  
       scp -r src root@10.20.30.40:/tmp/ (-r : for copying directories)
