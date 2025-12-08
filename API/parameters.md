@@ -3,6 +3,8 @@
 - **Query** – used to search  
 - **Parameter** – a value used to refine or filter the search
 
+![Query Parameter](C:\Users\chennasa\OneDrive - CDK Global LLC\Documents\personal\Picture1.PNG)
+
 ### Example URL
 `https://example.com/students?name=john&age=17`
 
@@ -22,6 +24,8 @@ Here, `q` is the parameter name:
 
 - **Path** – location of a resource  
 - **Parameter** – a value you can set (acts like a variable)
+
+![Path Parameter](C:\Users\chennasa\OneDrive - CDK Global LLC\Documents\personal\Picture1.PNG)
 
 ### Example URL
 `https://example.com/students/john/grades?order=asc`
