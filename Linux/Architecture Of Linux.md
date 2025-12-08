@@ -3,6 +3,8 @@
 Linux architecture is a layered structure consisting of hardware, the kernel, system libraries, the shell, and applications.
 
 ---
+<img width="636" height="425" alt="image" src="https://github.com/user-attachments/assets/096f0ea2-113c-4134-988f-44e01b671047" />
+
 
 ## 1. Hardware
 The physical components of the computer, such as the CPU, RAM, hard drive, and peripherals.  
