@@ -1,0 +1,35 @@
+merge conflict (practice)
+![Linux Architecture](../images/linux_architecture.jpg)
+comaparision on linux distributions
+scheduling run every 1 mins top command and store the output in log
+git branching strategies
+tag and commit difference
+resetting and reverting of commits
+testing on python parsing
+
+3. DevOps Principles
+Goal: Understand DevOps culture, automation, and delivery mindset. Topics:
+1. What is DevOps — history and evolution
+2. Core principles: Collaboration, Automation, Continuous Feedback
+3. DevOps lifecycle stages (Plan, Code, Build, Test, Release, Deploy, Operate, Monitor)
+4. CI/CD automation overview
+5. Infrastructure as Code (IaC) introduction
+6. Immutable infrastructure concept
+7. Configuration management and containerization
+8. Monitoring and feedback loops
+9. Communication and collaboration (Agile, Scrum)
+10. DevOps toolchain overview
+
+4. DevSecOps
+Goal: Integrate security into DevOps workflows (shift-left approach). Topics:
+1. What is DevSecOps and why it matters
+2. Security in SDLC — shifting left
+3. Static Application Security Testing (SAST) tools (SonarQube)
+4. Dynamic Application Security Testing (DAST)
+5. Dependency scanning (Trivy)
+6. Container security and image scanning
+7. Secrets management (Vault, Azure Key Vault, AWS Secrets Manager)
+8. Role-Based Access Control (RBAC)
+9. Secure CI/CD pipelines
+
+need to explain devops daigram, use chatgpt and google images for sources
