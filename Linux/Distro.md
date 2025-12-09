@@ -12,3 +12,15 @@ Linux comes in many versions called *distros*. They all use the same kernel but 
 - **CentOS**: A community-supported Linux distribution based on the source code of Red Hat Enterprise Linux (RHEL).
 - **openSUSE**: A community-developed distribution from Germany with both stable and rolling release versions.
 - **Kali Linux**: A specialized distribution for penetration testing and digital forensics.
+
+# CentOS vs Alpine Comparison
+
+| Feature        | CentOS                | Alpine                        |
+|----------------|-----------------------|-------------------------------|
+| Purpose        | Enterprise servers    | Lightweight Dockercontainers  |
+| Size           | Large                 | Very small                    |
+| Package Manager| yum/dnf               | apk                           |
+| C Library      | glibc                 | musl                          |
+| Init System    | systemd               | OpenRC                        |
+| Stability      | Very high             | High but minimal              |
+| Best For       | Servers               | Docker images                 |

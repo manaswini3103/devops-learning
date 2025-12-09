@@ -17,6 +17,8 @@
 ## commands
 **crontab -l** (lists the cron jobs running)<br>
 **crontab -e** (we can add a cron job using this command where e – edit)
+**crontab -r** (If you want to remove every cron job for the current user, without any confirmation)
+**crontab -i -r** (this gives safety prompt before removing)
 
 - Execute a job at 8:30 on everyday morning
 **ex**: 30 8 * * * command

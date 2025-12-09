@@ -1,19 +1,4 @@
-# branching
-
-- Branching allows you to create independent lines of development within a single repository.
-- Each branch represents a separate set of changes, enabling you to work on new features, bug fixes, or experimental changes without affecting the stability of the main project by creating a new branch. 
-- Branch means if many teams are working on a single project, they can get their own copy of the code/repo.
-- It has the concept of tree and branches.
-
-## commands
-
-1. git branch (to check for the branch)
-2. git branch -M main (to rename branch)
-3. git checkout `<branch name>` (to navigate to different branches)
-4. git checkout -b `<new branch name>` (to create new branch)
-5. git branch -d `<bracnh name>` (to delete branch)
-
-# merging
+# Merging
 
 - Merging integrates changes from one branch into another.
 - This process combines the commit histories of two branches, allowing you to incorporate completed work from a feature branch back into the main codebase (e.g., main or master).
@@ -40,6 +25,50 @@ This results in a **merge conflict**, which must be resolved manually by:
 2. Choosing which changes to keep  
 3. Staging the resolved files  
 4. Committing the merge resolution  
+
+### Resolving Merge conflicts
+
+AN event that takes place when Git is unable to automatically resolve differences in code between two commits.
+
+#### Example
+
+**Index.html (of main branch)**
+- Create index.html file in main branch, then add and commit the changes.
+```html
+<p> This is a new feature (button) </p>
+```
+
+**Index.html (of feature branch)**
+
+- Create index.html file in main branch, then add and commit the changes.
+```html
+<p> This is a new feature (dropdown) </p>
+```
+- Then give `git diff main` to know differences between two branches
+- And give `git merge main`, it'll throw merge conflict
+- In merge conflict we''ll have three options
+
+1. Accept Current Change
+
+If we want only to keep the currnet branche (ex: feature) changes.
+
+2. Accept Incoming Change
+
+If we want to keep the changes made in other branch (ex: main)
+
+3. Accept Both Chnages
+
+If we want to keep chnages made in both the branches.
+
+**Index.html (of feature branch)**
+
+```html
+<p> This is a new feature (dropdown) </p>
+<p> This is a new feature (button) </p>
+```
+- Save the changes in the files add and commit it.
+- go to main branch and give `git merge feature`
+- it resolves the merge conflicts
 
 ---
 

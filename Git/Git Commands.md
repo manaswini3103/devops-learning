@@ -43,10 +43,64 @@ git add . #adds all the changes
 
 ## commit
 
-It is the record of the change
+- A commit represents a specific change or set of changes made to the project's files at a particular point in time.
+- Each commit is a snapshot of the entire repository at that moment.
+- Commits form the linear history of a branch, and new commits are added on top of previous ones, moving the branch pointer forward.
+- Every commit has a unique SHA-1 hash identifier and includes information such as the author, committer, timestamp, and a commit message describing the changes.
+- Commits are mutable in the sense that they are part of a branch's active development, and the branch head moves with new commits.
 
 ```bash
 git commit -m "message of the changes made"
+```
+
+## tag
+
+- A tag is a label used to mark a specific commit in your project's history.
+- Tags are mainly used
+    - To mark software release versions (v1.0, v2.3.5)
+    - To reference stable points in the code
+    - To easily roll back to or download a specific version
+    - To create GitHub release notes
+- Think of a tag as a sticky note you attach to a commit so it's easy to find later.
+
+**Tags give meaningful names:**
+
+- v1.0   → First public release  
+- v1.1   → Minor update  
+- v2.0   → Major changes  
+
+### Types of Tag
+
+1. Lightweight Tag
+
+A simple label (just a pointer to a commit), It doesn't have any extra metadata and they are not intended to be moved.
+
+````bash
+git tag v1.0           # creating lightweight tag
+git push origin v1.0   # push to github
+````
+
+```bash
+git tag -d v1.0        # to delete a tag locally
+git push origin --delete v1.0 # deletes a tag at remote
+git tag                # lists the tags
+git show v1.0 #it'will show tagger info, message, commit detials
+```
+
+2. Annotated Tag
+
+- These are stored as full Git objects, containing metadata like:
+    - tagger's name
+    - email
+    - date
+    - tagging message 
+- These are generally preferred for releases as they provide more information
+
+```bash
+git tag -a v1.0 -m "Initial stable release"  # -a refers to annotated tag
+git push origin v1.0
+
+git tag -a v1.0 a1b2c3d4 -m "Tagging previous release" # cretaing tag for particular hash - a1b2c3d4
 ```
 
 ## push
@@ -102,3 +156,13 @@ Updates and existing Local repo with the changes made in Remote repo.
 ```bash
 git pull origin main
 ```
+
+## commit vs tag
+
+| Feature             | Commit                              | Tag                                |
+|---------------------|---------------------------------------|-------------------------------------|
+| What it is          | Snapshot of changes                   | Label pointing to a commit          |
+| Changes over time?  | Yes, new commits are created          | No, tag stays fixed                 |
+| Has message?        | Yes (commit message)                  | Yes, if it's an annotated tag       |
+| Used for?           | Every change you make                 | Marking releases or milestones      |
+| Identified by       | Long hash (e.g., a1b2c3...)           | Friendly name (e.g., v1.0)
