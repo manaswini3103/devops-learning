@@ -24,6 +24,9 @@ DevOps is a collaborative way of working where development, operations, QA, secu
 Git, Jenkins, GitHub Actions, Docker, Kubernetes, Terraform, Ansible, Prometheus/Grafana, AWS/Azure/GCP services, etc.
 
 # History & Evolution
+
+![DevOps History](../images/history.png)
+
 1. Pre-DevOps (Before 2007): Traditional Waterfall models created silos, leading to slow, error-prone releases as Dev and Ops worked separately.
 2. The Spark (2007-2009):
     - 2007: Patrick Debois notes Dev/Ops disconnects.

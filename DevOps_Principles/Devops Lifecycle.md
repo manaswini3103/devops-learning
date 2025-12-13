@@ -35,3 +35,134 @@ Tools: Kubernetes, AWS/Azure/GCP, ELK Stack, Prometheus, Grafana.
 8. **Monitor**: This phase involves observing how the software is performing in the real world. Data about user behaviour and application performance is collected to identify any issues or bottlenecks. By monitoring the system, the team can quickly spot and fix problems that may affect performance.
 
 Tools: Prometheus + Grafana, Datadog, New Relic, Splunk.
+
+# DevOps toolchain overview
+
+![DevOps Tools Pipeline](../images/pipeline.jpg)
+
+1. **Planning & Collaboration Tools**
+- Used for project tracking, requirement gathering, and communication.  
+- Tools:
+    - Jira
+    - Azure Boards
+    - Trello
+    - Confluence
+    - Slack / Microsoft Teams
+    - Miro
+- Purpose:
+    - Track tasks and user stories
+    - Document features
+    - Improve team communication
+
+2. **Source Code Management (SCM)**
+- Tools that store, version, and manage code.
+- Tools:
+    - Git (core technology)
+    - GitHub
+    - GitLab
+    - Bitbucket
+- Purpose:
+    - Version control
+    - Collaboration via pull/merge requests
+    - Code reviews
+
+3. **Continuous Integration (CI)**
+- Automatically builds and tests code whenever developers push changes.
+- Tools:
+    - Jenkins
+    - GitHub Actions
+    - GitLab CI/CD
+    - CircleCI
+    - Travis CI
+    - Azure Pipelines
+- Purpose:
+    - Catch bugs early
+    - Ensure code always integrates cleanly
+
+4. **Build & Artifact Management**
+- Packages code into deployable artifacts and stores them safely.
+- Tools:
+    - Maven / Gradle / npm (build tools)
+    - JFrog Artifactory
+    - Nexus Repository
+    - GitHub Packages
+    - Harbor
+    Docker Registry
+- Purpose:
+    - Build artifacts (JAR, WAR, Docker images)
+    - Store and version artifacts
+
+5. **Configuration Management**
+- Automates server configuration and state management.
+- Tools:
+    - Ansible
+    - Puppet
+    - Chef
+    - SaltStack
+- Purpose:
+    - Install software
+    - Manage configurations
+    - Maintain consistency across servers
+
+6. **Infrastructure as Code (IaC)**
+- Creates and manages infrastructure using code.
+- Tools:
+    - Terraform
+    - AWS CloudFormation
+    - Azure ARM / Bicep
+    - Pulumi
+- Purpose:
+    - Automate infrastructure provisioning
+    - Maintain environments consistently
+
+7. **Containerization & Orchestration**
+- Packages apps and runs them at scale.
+- Tools:
+    - Docker
+    - Kubernetes
+    - OpenShift
+    - ECS / EKS / AKS / GKE
+    - Helm
+- Purpose:
+    - Portable deployments
+    - Auto-scaling
+    - Self-healing infrastructure
+
+8. **Continuous Delivery/Deployment (CD)**
+- Automates deploying applications to staging/production.
+- Tools:
+    - ArgoCD
+    - Spinnaker
+    - FluxCD
+    - Jenkins X
+    - AWS CodeDeploy
+- Purpose:
+    - Automated releases
+    - Canary, blue/green, rolling deployments
+
+9. **Monitoring & Logging**
+- Tracks system performance and logs for troubleshooting.
+- Tools:
+    - Prometheus
+    - Grafana
+    - ELK Stack (Elasticsearch, Logstash, Kibana)
+    - Datadog
+    - New Relic
+    - Splunk
+- Purpose:
+    - Monitor health
+    - Detect failures
+    - Support feedback loops
+
+10. **Security (DevSecOps)**
+- Integrates security into every stage of the pipeline.
+- Tools:
+    - SonarQube (code scanning)
+    - Snyk (dependency scanning)
+    - Trivy
+    - HashiCorp Vault (secrets management)
+    - Aqua Security / Prisma Cloud
+- Purpose:
+    - Shift-left security
+    - Vulnerability scanning
+    - Secrets & compliance
