@@ -11,7 +11,7 @@
 - Collaboration: dev, ops, and security teams work together, not in isolation.
 - Infrastructure as Code (IaC) checks: security is applied to cloud infrastructure definitions and environments.
 
-![DevSecOps](../images/devsecops.png)
+<img src="images/devsecops.png" width="400" height="250">
 
 ## Why DevSecOps Matters
 
