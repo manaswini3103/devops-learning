@@ -26,6 +26,8 @@ This results in a **merge conflict**, which must be resolved manually by:
 3. Staging the resolved files  
 4. Committing the merge resolution  
 
+<img src="../images/mergeconflict.png"  width="300"height="400">
+
 ### Resolving Merge conflicts
 
 AN event that takes place when Git is unable to automatically resolve differences in code between two commits.
@@ -37,6 +39,7 @@ AN event that takes place when Git is unable to automatically resolve difference
 ```html
 <p> This is a new feature (button) </p>
 ```
+`git commit -am "made changes to main`
 
 **Index.html (of feature branch)**
 
@@ -44,6 +47,8 @@ AN event that takes place when Git is unable to automatically resolve difference
 ```html
 <p> This is a new feature (dropdown) </p>
 ```
+`git commit -am "made changes to feature`
+
 - Then give `git diff main` to know differences between two branches
 - And give `git merge main`, it'll throw merge conflict
 - In merge conflict we''ll have three options
