@@ -26,7 +26,7 @@ This results in a **merge conflict**, which must be resolved manually by:
 3. Staging the resolved files  
 4. Committing the merge resolution  
 
-<img src="../images/mergeconflict.png"  width="300"height="400">
+<img src="../images/mergeconflict.png"  width="300" height="300" >
 
 ### Resolving Merge conflicts
 
