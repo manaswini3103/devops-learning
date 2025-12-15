@@ -24,7 +24,7 @@ Communication allows quick alignment when things change.
 
 # Scrum: A Framework for Team Collaboration
 
-Scrum is an Agile framework that organizes work into sprints (time-boxed intervals).
+Scrum is an Agile framework (foundational structure like blueprint/skeleton) that organizes work into sprints (time-boxed intervals).
 It has defined roles, ceremonies, and artifacts that enhance communication and teamwork.
 
 ## Scrum Roles That Enhance Collaboration

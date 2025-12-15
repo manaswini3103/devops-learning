@@ -27,17 +27,21 @@ Security is built in, not bolted on.
 
 ## How Security Fits into Each SDLC Phase (Shift-Left Approach)
 
-1. Requirements Phase
-- Identify security requirements (access control, encryption, compliance).
-- Threat modeling (predict how attackers could exploit the system).
+1. Planning and Requirements Phase
+- Goal is to identify security needs early
+- Define security requirements (confidentiality: preventing unauthorized access, integrity: preventing unauthorized modification, availability: systems are available when needed).
+- Identify sensitive information (passwords, personal data).
+- Perform Risk assesment and Threat modeling (predict how attackers could exploit the system).
 
 2. Design Phase
+- Goal is to build a secure architecture (designing Role-Based access control)
 - Secure architecture review.
+- plan authentication and encryption mechanisms.
 - Apply design principles: least privilege, zero trust, defense in depth.
 
 3. Development Phase
-- Secure coding practices and coding standards.
-- Developer training and secure code tools.
+- Golas is to follow Secure coding practices and coding standards.
+- Avoiding common vulnerability (weakness or flaw in a system) like SQL Injection, XSS, buffer overflow.
 - Static Application Security Testing (SAST).
 
 4. Build & Integration
@@ -47,18 +51,21 @@ Security is built in, not bolted on.
 
 5. Testing Phase
 - Dynamic testing (DAST).
-- Penetration testing.
+- perform security testing (Penetration testing, vulnerability scannning).
 - API and container security scans.
+- Testing whether attackers can bypass login.
 
 6. Deployment
-- Secure configuration checks.
+- Securing production environment and configuration of infrastructure(servers and databases).
 - Container image scanning.
 - Secrets management.
+- Disabling(turning-off) defualt passwords and open ports.
 
 7. Operations & Maintenance
 - Continuous monitoring, logging, SIEM.
-- Automated patching.
-- Incident response processes.
+- Apply security updates and automating patches.
+- Responding to incidents and new threats.
+- updating software when a vulnerability is discovered.
 
 ## Common Shift-Left Security Tools
 

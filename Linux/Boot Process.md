@@ -2,7 +2,8 @@
 
 The Linux boot process starts with BIOS/UEFI running a POST (Power-On Self-Test) and finding the bootloader (like GRUB) in the MBR or EFI partition. The bootloader loads the Linux kernel into memory, which then initializes hardware, mounts the root filesystem, and starts the init system (typically systemd). The init system brings the system to a usable state by starting essential services and presenting a login prompt or desktop environment.
 
-![Boot Process](../images/bootprocess.png)
+<img src="../images/bootprocess.png" width="300" height="300">
+
 
 Here's a step-by-step breakdown:
 

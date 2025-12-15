@@ -65,7 +65,7 @@ Vulnerabilities are caught before deployment, saving time and cost.
 4. Complements SAST and DAST  
 SAST → finds coding issues  
 DAST → runtime issues  
-SCA (Trivy) → dependency and supply chain issues  
+SCA (Trivy) → dependency and supply chain attacks (instead of directly attacking the organisation attackers compromise the trusted third parties providing services to organisation)
 
 Together they create full-stack application security.
 

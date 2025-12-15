@@ -25,7 +25,7 @@ It ensures that code changes made by developers are automatically built, tested,
 1. **Source Code Management (SCM)**: Developers push their code from local machines to a remote repository such as GitHub. This allows teams to collaborate, review, and manage code versions easily.
 
 2. **Build Process**: The source code is then compiled using tools like Maven, which packages the application into **artifacts** such as .jar, .war, or .ear files.  
-**artifacts** are final products of your code before deployment. They are the packaged, compiled, or generated components that will be tested, stored, or deployed.
+  - **artifacts** are final products of your code before deployment. They are the packaged, compiled, or generated components that will be tested, stored, or deployed.
 
 3. **Code Quality Check**: Tools like SonarQube analyze the code for bugs, code smells, and security issues. It generates detailed reports (HTML or PDF) to maintain code quality standards.
 
@@ -52,13 +52,12 @@ It is the process of deploying an application into production servers manually w
 - Keep the application always ready for production
 
 # CI/CD Automation Pipeline Stages
-
 1. Commit Code
 2. Pull Code + Build
-3. Run Automated Tests
+3. Run Automates Tests
 4. Security Scanning
-5. Build Artifact (Docker image, JAR, etc.)
-6. Deploy to Staging
+5. Build Artifact (Docker image, .JAR, etc.)
+6. Deploy to staging
 7. Run Integration & Acceptance Tests
 8. Deploy to Production (manual or automatic)
-9. Monitor & Rollback if needed
+9. Monitor and Rollback if needed

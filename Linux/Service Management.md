@@ -3,7 +3,7 @@
 **chkconfig** - this controls which services are set to start on boot. If we want to start out services while starting our system itself.
 
 - We can give systemctl or service we’ll get the same result.
-#systemctl status http
+#systemctl status http  
 #service `<name of the service>` status  : to check status of the service  
 #service `<name of the service>` start   : to start the service  
 #service `<name of the service>` stop    : to stop the service  

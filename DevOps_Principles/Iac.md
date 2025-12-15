@@ -82,7 +82,8 @@ These tools are primarily used to create, modify, and destroy the foundational i
 
 ### Configuration Management (CM) Tools
 
-CM is the practice of automating the setup, configuration, and maintenance of servers, applications, and environments. Instead of manually installing software or updating configuration files, CM tools automate this process reliably.
+- CM is the practice of automating the setup, configuration (settings or parameters that controls behaviour of software application/system), and maintenance of servers, applications, and environments.
+- Instead of manually installing software or updating configuration files (store those setting of controlling the system behaviour), CM tools automate this process reliably.
 
 #### Why Configuration Management Is Important
 
@@ -136,6 +137,7 @@ CM is the practice of automating the setup, configuration, and maintenance of se
 - Fast deployment: Start in seconds—not minutes.
 - Scalability: Run multiple instances easily (e.g., microservices).
 - Portable: Runs on any system that supports containers.
+- Auto-Scaling: ability of the system to automatically increase or decrease resources based on demand.
 
 #### Tools
 **Docker**

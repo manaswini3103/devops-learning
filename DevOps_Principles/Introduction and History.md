@@ -1,6 +1,8 @@
 # DevOps
 
-DevOps is a collaborative way of working where development, operations, QA, security, and other IT teams work together across the entire software lifecycle — from planning to coding, testing, deployment, and maintenance.
+DevOps is a collaborative way of working where development, operations, QA (Quality Assurance), security, and other IT teams work together across the entire software lifecycle — from planning to coding, testing, deployment, and maintenance.
+
+- QA is testing environment where software is deployed specifically for testers to verify quality, functionality, and stability before it goes to production.
 
 ## Key Goals
 

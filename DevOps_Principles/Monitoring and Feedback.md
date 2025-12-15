@@ -1,9 +1,9 @@
 # Continuous Monitoring
 
-Monitoring means continuously tracking the health, performance, and behavior of applications and infrastructure in real time. It can be achieved with the help of Prometheus and Grafana.
+Monitoring means continuously tracking the health, performance, and behavior of applications and infrastructure in real time.
 
-- We can continuously monitor and can get notified before anything goes wrong with the help of Prometheus, we can gather many performance measures, including CPU and memory utilization, network traffic, application response times, error rates, and others.
-- Grafana makes it possible to visually represent and keep track of data from time series, such as CPU and memory utilization.
+- We can continuously monitor and can get notified before anything goes wrong with the help of **Prometheus**, we can gather many performance measures, including CPU and memory utilization, network traffic, application response times, page load time, error rates, and others.
+- **Grafana** makes it possible to visually represent and keep track of data from time series, such as CPU and memory utilization.
 
 ## Goals of Monitoring
 
