@@ -33,3 +33,14 @@ Goal: Integrate security into DevOps workflows (shift-left approach). Topics:
 9. Secure CI/CD pipelines
 
 need to explain devops daigram, use chatgpt and google images for sources
+
+Deployment strategies
+5. Deployment Strategies
+Goal: Understand how apps are safely rolled out in production. Topics:
+1. Continuous Delivery vs Continuous Deployment
+2. Blue-Green deployment – concept and flow
+3. Rolling updates – zero downtime approach
+4. Canary deployment – testing with subset users
+5. Recreate strategy (for simplicity)
+6. Rollback mechanisms and best practices
+
