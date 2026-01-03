@@ -87,6 +87,25 @@ publish
 Gradle has a rich ecosystem of plugins (both official and third-party) that extend its functionality and provide integrations for various technologies (java, C++, etc) and tools, from Android development (where it is the official build tool) to Docker integration and code quality checks. 
 
 
+# Common Gradle Commands
+
+| Command             | Purpose                                        |
+| ------------------- | -----------------------------------------------|
+| gradle build        | Build project completely                       |
+| gradle clean        | Remove old build files                         |
+| gradle clean build  | Performs a clean build from scratch            |
+| gradle test         | Run tests                                      |
+| gradle assemble     | Build without tests                            |
+| gradle run          | Run application (require apps plugins)         |
+| gradle tasks        | List all available gradle tasks                |
+| gradle check        | Runs all verification tasks                    |
+| gradle dependencies | Show dependencies                              |
+| gradle wrapper      | Creates Gradle Wrapper files                   |
+| gradle init         | Sets up a Gradle project for you automatically |
+
+
+# Maven vs Gradle
+
 | Feature         | Maven                | Gradle                         |
 |-----------------|----------------------|--------------------------------|
 | Configuration   | XML                  | Groovy / Kotlin                |
@@ -94,3 +113,5 @@ Gradle has a rich ecosystem of plugins (both official and third-party) that exte
 | Flexibility     | Limited              | High                           |
 | Learning Curve  | Easy                 | Moderate                       |
 | Android Support | Limited              | Excellent                      |
+
+

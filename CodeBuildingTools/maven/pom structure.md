@@ -89,7 +89,7 @@ Example:
 - version: Current version of the project.
 
 ### Packaging
-- Defines output type: jar (default), war and pom.  
+Defines output type: jar (default), war and pom.  
 `<packaging>jar</packaging>`
 
 ### Dependencies

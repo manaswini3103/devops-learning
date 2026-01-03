@@ -42,7 +42,7 @@ Example:
 }
 ```
 - main: Entry point of the application, file that runs when the package is imported.
-- "express": "^4.18.2" - express is web framework for Nodr.js, ^ - Allows minor and patch updates (like: 4.18.9 or 4.19.0 but not 5.0.0). Included in production builds.
+- "express": "^4.18.2" - express is web framework for Nodr.js, ^ - Allows safe upgrades (like: 4.18.9 or 4.19.0 but not 5.0.0), ~ - allows patch updates only (like 4.18.4 but not 4.19.0). Included in production builds.
 - "jest": "^29.0.0" - jest is a testing framework, not required when app is running in production.
 - engines: Specifies required Node.js / npm versions.
 - repository: source code location

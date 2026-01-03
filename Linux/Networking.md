@@ -83,6 +83,8 @@ port number      : 22
 Daemon/process   : sshd  
 Conf file        : /etc/ssh/sshd_config  
 
+9. **nslookup** - it gets the IP address of a host name by giving `nslookup <hostname>`.
+
 **how it works**  
 If we want to login from server1 to server2, we need key to login to it. We’ll have private (id is “id_rsa” stored in $HOME/.ssh/id_rsa) and public (id is “id_rsa.pub” stored in $HOME/.ssh/authorized_keys) keys. Anyone can know our public key but shouldn’t know our private key.
 
