@@ -7,18 +7,20 @@ Linux architecture is a layered structure consisting of hardware, the kernel, sy
 
 
 ## 1. Hardware
-The physical components of the computer, such as the CPU, RAM, hard drive, and peripherals.  
+The physical components of the computer, such as the CPU, RAM, hard drive,network interfaces and other input/output devices.  
 It is the foundation upon which the rest of the system is built.
 
 ---
 
 ## 2. Kernel
-The core of the operating system that manages system resources and acts as the interface between hardware and software.  
+The core of the operating system that manages system resources and acts as the interface between hardware and software. It runs in protected memory area called **Kernel Space** giving it full access to system's hardware.  
 It handles low-level tasks like:
 
-- Process scheduling  
-- Memory management  
-- Device drivers  
+- Process Management: Manages execution and termination of processes, allowing multiple applications to run concurrently.
+- Memory Management: Handles allocation and deallocation of memory.
+- Device Management: Interacts with hardware through specific device drivers which are loaded as modules into kernel.
+- File System Management: Manages how data is stored, retrived and organized on storgae devices.
+- Networking: Manages network communication and protocols (like TCP/IP)
 
 ### **Types of Kernels**
 - **Monolithic Kernel**  
@@ -29,26 +31,25 @@ It handles low-level tasks like:
 ---
 
 ## 3. Shell
-A command-line interpreter that acts as a user interface to the kernel.  
-It takes commands from the user and passes them to the kernel for execution.
+A command-line interpreter that acts as an interface between user the kernel.  
+It takes commands from the user, translates it into intsructions (system calls) that the kernel can understand and execute.
 
-**Examples:** Bash, Zsh
+**Examples:** Bash (Bourne Again Shell), Zsh and Ksh
 
 ---
 
 ## 4. Application
-User-level programs such as desktop environments, word processors, browsers, and other software that run in user space.
+User-level programs such as desktop environments, text editors, web browsers, games and other software that run in user space.
 
 ---
 
 ## 5. System Libraries
-Libraries (like the GNU C Library) provide a convenient interface for applications to access kernel functions.  
-They translate user commands and application requests into system calls that the kernel understands.
+Pre-written functions that applications can use to interact with kernel services without writing direct kernel code. The most common one is GNU C Library (glibc)
 
 ---
 
 ## 6. System Utilities
-System utilities are essential tools provided by Linux to manage and configure the system.  
+System utilities are essential tools provided by Linux to manage and configure the system (ls,top,df, ifconfig).  
 These utilities help with tasks such as:
 
 - Installing software  

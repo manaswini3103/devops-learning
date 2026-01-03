@@ -53,16 +53,13 @@ AN event that takes place when Git is unable to automatically resolve difference
 - And give `git merge main`, it'll throw merge conflict
 - In merge conflict we''ll have three options
 
-1. Accept Current Change
-
+1. Accept Current Change  
 If we want only to keep the currnet branche (ex: feature) changes.
 
-2. Accept Incoming Change
-
+2. Accept Incoming Change  
 If we want to keep the changes made in other branch (ex: main)
 
-3. Accept Both Chnages
-
+3. Accept Both Chnages  
 If we want to keep chnages made in both the branches.
 
 **Index.html (of feature branch)**
@@ -85,6 +82,8 @@ If we want to keep chnages made in both the branches.
 - Git simply **moves the target branch pointer** to the latest commit of the source branch.  
 - Results in a **linear history**.
 
+![DevOps Tools Pipeline](../images/fastforwardmerging.png)
+
 #### Example
 ```bash
 git checkout main
@@ -100,6 +99,8 @@ git merge feature-branch
     1. The two branch tips
     2. Their common ancestor
 
+![DevOps Tools Pipeline](../images/threewaymerging.png)
+
 #### Example
 ```bash
 git merge feature-branch
@@ -109,6 +110,8 @@ git merge feature-branch
 - Combines all commits from a branch into one single commit.
 - Useful for maintaining a clean commit history.
 - Does not automatically delete the branch.
+
+![DevOps Tools Pipeline](../images/squashmerge.jpg)
 
 #### Example
 ```bash
@@ -121,6 +124,8 @@ git commit
 - Produces a linear commit history.
 - Does not create a merge commit.
 
+![DevOps Tools Pipeline](../images/rebasemerge.jpg)
+
 #### Example
 ```bash
 git rebase main
@@ -131,6 +136,8 @@ git merge feature-branch
 ### 5. No-FF (No Fast-Forward) Merge
 - Forces Git to always create a merge commit, even if a fast-forward is possible.
 - Preserves branch structure.
+
+![DevOps Tools Pipeline](../images/nofastforward.png)
 
 #### Example
 ```bash

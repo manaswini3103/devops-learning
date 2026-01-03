@@ -22,7 +22,7 @@ Tools: Git, GitHub/GitLab/Bitbucket, IDEs.
 Tools: Maven, Jenkins, Gradle, npm, GitHub Actions.
 
 4. **Test**: The software is then tested to ensure it works properly.
-- This includes different types of tests like security, performance, and user acceptance.
+- This includes different types of tests (Unit tests, Integration tests and Security tests (SAST/DAST)) like security, performance, and user acceptance.
 - Tools like JUnit and Selenium are used to automate these tests and verify the software’s integrity.
 
 Tools: Selenium, JUnit, PyTest, SonarQube.

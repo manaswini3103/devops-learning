@@ -8,6 +8,8 @@
 
 The process involves gradually shifting a percentage of live user traffic to the new version, monitoring performance, and then making a decision to proceed or roll back.
 
+<img src="../images/canary.jpg" width="300" height="300">
+
 1. **Plan and Create**: A new version of the application (the "canary") is deployed on a separate set of servers or infrastructure, running alongside the existing stable version (baseline).
 
 2. **Analyze (Monitor)**: A small percentage of user traffic (e.g., 1% or 5%) is routed to the canary version via a load balancer or service mesh. Key metrics such as error rates, response times, and user behavior are closely monitored.

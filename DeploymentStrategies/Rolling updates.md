@@ -5,6 +5,8 @@
 
 ## How Rolling Updates Work
 
+<img src="../images/rolling.jpg" width="300" height="300">
+
 1. **Gradual Replacement**: Instead of deploying all new instances at once, it updates pods/servers in small batches.  
 Users → LB → v1-Instance-1
               v1-Instance-2

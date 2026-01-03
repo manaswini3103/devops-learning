@@ -21,6 +21,8 @@ Git branching strategies provide frameworks for managing code changes and collab
 
 Git Flow is a strict and organized branching model used in big projects.
 
+![DevOps Tools Pipeline](../images/gitflow.jpg)
+
 **How it works**
 
 - feature branches → each feature is built on a branch like feature/login
@@ -37,6 +39,8 @@ Git Flow is a strict and organized branching model used in big projects.
 ## GitHub Flow
 
 A simple and lightweight process commonly used by small teams and companies deploying all the time.
+
+![DevOps Tools Pipeline](../images/githubflow.jpg)
 
 **How it works**
 
@@ -55,17 +59,20 @@ A simple and lightweight process commonly used by small teams and companies depl
 
 GitLab Flow is a flexible model that combines GitHub Flow + some ideas from Git Flow.
 
+![DevOps Tools Pipeline](../images/gitlab.jpg)
+
 **How it works**
 
 Two common styles:
 
 1. Environment-based branches
-- main → latest code
-- staging → testing environment
-- production → live environment
+- Master: Main production branch housing stable release ready code.
+- Develop: Contains new features and bug fixes.
+- Feature: Developers initiate feature branches from the develop branch to implement new features or address bugs. Upon completion, they integrate the changes from the feature branch into the develop branch.
 
 2. Release branches
 - Each release has its branch, e.g., release/2.0
+- Release: Prior to a new release, a release branch is created from the develop branch. This branch is used to combine new features and bug fixes for the release. Upon completion, developers merge the changes from the release branch into both the develop and main branches.
 
 **When to use**
 
@@ -75,6 +82,8 @@ Two common styles:
 ## Trunk-Based Development
 
 A fast-moving, modern practice used by high-performing DevOps teams.
+
+![DevOps Tools Pipeline](../images/trunckbranch.jpg)
 
 **How it works**
 

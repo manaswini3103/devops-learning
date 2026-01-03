@@ -6,6 +6,8 @@ Blue-green deployment is an application release strategy that minimizes downtime
 
 The core concept of blue-green deployment is to have a complete, isolated staging environment that is an exact replica of the production environment.
 
+<img src="../images/bluegreen.jpg" width="300" height="300">
+
 1. **Blue Environment**: This is the current, live production environment that serves all user traffic. It is a stable, known-working version of the application.
 2. **Green Environment**: This is the new staging environment where the updated application code is deployed and tested, isolated from live users.
 3. **Zero-Downtime**: The primary benefit is the ability to switch between environments instantly using a load balancer (A load balancer acts like a traffic controller that sends user requests to the healthiest and least busy server.) or router, eliminating the need for a maintenance window and ensuring a seamless user experience.

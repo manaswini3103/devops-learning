@@ -3,6 +3,8 @@
 - This ensure that code is built, tested, and deployed safely, preventing vulnerabilities, secrets leaks, and malicious code from reaching production.
 - They are a core part of DevSecOps, where security is embedded into automation—not added later.
 
+![DevOps Tools Pipeline](../images/devsecopsCIandCD.jpg)
+
 
 ## Why Securing CI/CD Pipelines Matters
 

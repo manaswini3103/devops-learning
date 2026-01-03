@@ -5,6 +5,7 @@ scheduling run every 1 mins top command and store the output in log
 git branching strategies
 tag and commit difference
 resetting and reverting of commits
+practice 1 python program every day
 testing on python parsing
 
 3. DevOps Principles
@@ -44,3 +45,34 @@ Goal: Understand how apps are safely rolled out in production. Topics:
 5. Recreate strategy (for simplicity)
 6. Rollback mechanisms and best practices
 
+23rd dec
+adding more images
+practice gitflow and github flow
+CAMs principles in dveops
+testing strategies
+2 types of programming languages compiling and interpretting languages differences
+challenges in manually compiling and advantages of using build tool like maven
+
+. Code Building Tools (Maven, Gradle, NPM, MSBuild)
+Goal: Learn how source code is built, packaged, and versioned.
+Topics:
+1. Build lifecycle concept
+2. Introduction to build tools
+3. Maven:
+    * pom.xml structure
+    * settings.xml
+    * Dependencies and plugins
+    * Building JAR/WAR
+4. Gradle:
+    * build.gradle basics
+    * Tasks and dependencies
+5. NPM:
+    * package.json structure
+    * npm install, build, and run
+6. MSBuild:
+    * Build configuration in Visual Studio projects
+7. Common build artifacts and directory structure
+
+how to change a denepedency version, common build failures, how to debug when a build fails
+how to change maven project to gradle
+npm - download and practice from other repo

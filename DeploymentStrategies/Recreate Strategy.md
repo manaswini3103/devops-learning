@@ -8,6 +8,8 @@
 
 The process is a simple two-stage operation:
 
+<img src="../images/recreate.jpg" width="300" height="300">
+
 1. **Terminate existing pods**: All running instances of the current application version are stopped.
 
 2. **Create new pods**: Once all old instances are fully terminated, the new pods (containers) with the updated application version are started.
