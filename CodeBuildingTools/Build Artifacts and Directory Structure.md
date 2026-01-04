@@ -67,7 +67,7 @@ project-root/
 ├── gradlew / gradlew.bat  
 ├── gradle/  
 │   └── wrapper/  
-│
+│  
 ├── src/  
 │   ├── main/  
 │   │   ├── java/        ← Application source code  
