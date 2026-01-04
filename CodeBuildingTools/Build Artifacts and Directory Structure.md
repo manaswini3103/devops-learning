@@ -8,7 +8,7 @@ Logs
 - build/classes/java/main/ or target/classes/
 - Contains: .class files (compiled Java bytecode)
 
-2. JAR files
+2. JAR (Java Archive) files
 - build/libs/myapp-1.0.0.jar
 - Runnable or library archive
 - Contains compiled classes + resources
@@ -62,25 +62,25 @@ Logs
 📁 Standard layout (Gradle & Maven)
 
 project-root/
-├── build.gradle / pom.xml
-├── settings.gradle
-├── gradlew / gradlew.bat
-├── gradle/
-│   └── wrapper/
+├── build.gradle / pom.xml  
+├── settings.gradle  
+├── gradlew / gradlew.bat  
+├── gradle/  
+│   └── wrapper/  
 │
-├── src/
-│   ├── main/
-│   │   ├── java/        ← Application source code
-│   │   ├── resources/   ← Config files (application.yml, properties)
-│   │   └── webapp/      ← Web apps (JSP, HTML, CSS)
+├── src/  
+│   ├── main/  
+│   │   ├── java/        ← Application source code  
+│   │   ├── resources/   ← Config files (application.yml, properties)  
+│   │   └── webapp/      ← Web apps (JSP, HTML, CSS)  
 │   │
-│   └── test/
-│       ├── java/        ← Test source code
-│       └── resources/   ← Test configs
+│   └── test/  
+│       ├── java/        ← Test source code  
+│       └── resources/   ← Test configs  
 │
-├── build/ or target/    ← Generated build artifacts
-└── README.md
+├── build/ or target/    ← Generated build artifacts  
+└── README.md  
 
-Tool	Build directory
-Gradle	build/
+Tool	Build directory  
+Gradle	build/  
 Maven	target/

@@ -16,7 +16,7 @@ Visual Studio projects usually have these by default:
 |Configuration | Purpose                     |
 | -------------| ----------------------------|
 |Debug	       | For development & debugging |
-|Release	   | For production deployment   |
+|Release	     | For production deployment   |
 
 1. Debug configuration
 - Used while developing.
@@ -43,18 +43,18 @@ Visual Studio projects usually have these by default:
 
 
 ## Build outputs (artifacts)
-Depending on project type:cc
-C# / .NETcc
-bin/
- ├── Debug/
- │   └── net8.0/
- │       ├── MyApp.dll
- │       ├── MyApp.pdb
- │
- └── Release/
-     └── net8.0/
-         ├── MyApp.dll
-         └── MyApp.exe
+Depending on project type:cc  
+C# / .NETcc  
+bin/  
+ ├── Debug/  
+ │   └── net8.0/  
+ │       ├── MyApp.dll  
+ │       ├── MyApp.pdb  
+ │  
+ └── Release/  
+     └── net8.0/  
+         ├── MyApp.dll  
+         └── MyApp.exe  
 
 C++ projects
 - Debug/

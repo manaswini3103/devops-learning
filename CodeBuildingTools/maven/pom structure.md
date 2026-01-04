@@ -165,17 +165,17 @@ Defines output type: jar (default), war and pom.
 
 ## High-Level pom.xml Structure (Summary)
 
-project
- ├── modelVersion
- ├── groupId
- ├── artifactId
- ├── version
- ├── packaging
- ├── dependencies
- ├── dependencyManagement
- ├── build
- │    └── plugins
- ├── repositories
- ├── properties
- └── profiles
+project  
+ ├── modelVersion  
+ ├── groupId  
+ ├── artifactId  
+ ├── version  
+ ├── packaging  
+ ├── dependencies  
+ ├── dependencyManagement  
+ ├── build  
+ │    └── plugins  
+ ├── repositories  
+ ├── properties  
+ └── profiles  
 

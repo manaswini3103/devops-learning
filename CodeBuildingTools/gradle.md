@@ -102,6 +102,7 @@ Gradle has a rich ecosystem of plugins (both official and third-party) that exte
 | gradle dependencies | Show dependencies                              |
 | gradle wrapper      | Creates Gradle Wrapper files                   |
 | gradle init         | Sets up a Gradle project for you automatically |
+|.\gradlew clean build| ./ runs in windows power shell                 |
 
 
 # Maven vs Gradle
