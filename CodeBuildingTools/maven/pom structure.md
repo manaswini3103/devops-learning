@@ -7,7 +7,7 @@ A properly structured POM file ensures consistent builds and dependency manageme
 
 ## POM Workflow
 
-![DevOps Tools Pipeline](../images/POM.png)
+![DevOps Tools Pipeline](../../images/POM.png)
 
 1. **Initialization**: Maven reads the pom.xml and initializes the project.
 2. **Dependency Resolution**: Downloads all defined dependencies from repositories.

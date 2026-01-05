@@ -25,13 +25,14 @@ Apache Maven is a build automation and dependency management tool, mainly used f
 - Handles transitive dependencies (dependencies of dependencies)
 
 ### Standard Project Structure
-- Maven enforces a standard layout:
- ├── src/main/java - your application code
- ├── src/main/resources - config files (Properties, XML)
- ├── src/test/java - Unit tests
- ├── pom.xml
- └── target/ - Maven's output folder (where the compiled classes and JARs go)
+- Maven enforces a standard layout:  
+ ├── src/main/java - your application code  
+ ├── src/main/resources - config files (Properties, XML)  
+ ├── src/test/java - Unit tests  
+ ├── pom.xml  
+ └── target/ - Maven's output folder (where the compiled classes and JARs go)  
 - Easy to understand and structure is same across all projects
+- config files (some text taht stores settings for application/soft, allowing users and administrators to customize the behaviour without changing the core code usinf formats XML, JSON, etc and extensions like .conf, .cfg, .ini )
 
 ### Maven Build Lifecycle
 - Maven works in phases, grouped into lifecycles.
@@ -40,7 +41,7 @@ Apache Maven is a build automation and dependency management tool, mainly used f
 ### Maven Repositories (Where the JARs live)
 - Repositories store project dependencies and artifacts. Maven never stores libraries inside your project folder. It downloads them from the internet to a local cache.
 
-![DevOps Tools Pipeline](../images/mavenrepo.webp)
+![Maven](../../images/mavenrepo.png)
 
 1. **Local repository**: A local repository is a directory on the machine of developer, which has all the dependencies and Maven only needs to download them once, even if multiple projects depends on them (e.g. ODBC). By default, maven local repository is user_home/m2 directory.  
 Example - C:\Users\user_home\.m2

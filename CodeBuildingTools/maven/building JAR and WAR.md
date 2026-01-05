@@ -46,12 +46,12 @@ Set the <packaging> element to war in your pom.xml.
 ```
 
 ## Ensure Standard Web Structure
-Maven assumes a standard directory structure for web projects, with web resources (like HTML, CSS, JSPs, and WEB-INF) located in src/main/webapp.
-src/main/java
-src/main/resources
-src/main/webapp
-    └── WEB-INF
-        └── web.xml
+Maven assumes a standard directory structure for web projects, with web resources (like HTML, CSS, JSPs, and WEB-INF) located in src/main/webapp.  
+src/main/java  
+src/main/resources  
+src/main/webapp  
+    └── WEB-INF  
+        └── web.xml  
 
 ## Build the Project:
 - In your project's root directory, run the command  

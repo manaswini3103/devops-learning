@@ -66,7 +66,7 @@ settings.xml is used to configure Maven environment-level settings like credenti
 
 ### <localRepository>
 - Changes default local repo location.  
-``<localRepository>D:/maven-repo</localRepository>`
+`<localRepository>D:/maven-repo</localRepository>`
 - Default: ~/.m2/repository
 
 ### <servers> (Credentials 🔐)
