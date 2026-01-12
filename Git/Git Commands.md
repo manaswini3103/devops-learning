@@ -157,6 +157,11 @@ Updates and existing Local repo with the changes made in Remote repo.
 git pull origin main
 ```
 
+git remote -v
+git remote set-url origin https://github.com/manaswini3103/MavenHelloWorld
+git branch -M main
+git push -u origin main
+
 ## commit vs tag
 
 | Feature             | Commit                              | Tag                                |

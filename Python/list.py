@@ -60,11 +60,23 @@ print(Counter(l))
 l1=[1,2,4,6,8,9]
 l2=[1,3,5,7,11,9]
 print(list(set(l1)-set(l2)))#converting list to set to remove duplicates and finding the differences
-print(list(set(l2)-set(l1)))'''
+print(list(set(l2)-set(l1)))
 
 #left rotate a list by n
 l=[1,2,3,4]
 rotate=int(input("enter a posistion"))
 l1=l[rotate:]+l[:rotate]
-print(l1)
+print(l1)'''
 
+l=[]
+tar=int(input("enter a number"))
+num=int(input("enter the number of elements that you want in list"))
+for i in range(num):
+    l1=int(input("enter some value in list"))
+    l.append(l1)
+print(l)
+for i in l:
+    if l[i]+l[i+1] == tar:
+        print(l[i],l[i+1])
+    else:
+        print("didn't get the some")

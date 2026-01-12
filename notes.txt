@@ -49,7 +49,6 @@ Goal: Understand how apps are safely rolled out in production. Topics:
 adding more images
 practice gitflow and github flow
 CAMs principles in dveops
-testing strategies
 2 types of programming languages compiling and interpretting languages differences
 challenges in manually compiling and advantages of using build tool like maven
 
@@ -76,3 +75,33 @@ Topics:
 how to change a denepedency version, common build failures, how to debug when a build fails
 how to change maven project to gradle
 npm - download and practice from other repo
+
+
+
+testing strategies
+maven and gradle build hands on
+build failures hands on
+hands on for git merge strategies
+practice python problems
+.git file exclusions (no need to push jar/war file)
+how to run java application in local host
+
+
+2. CI/CD Pipeline Development (Azure DevOps)
+Goal: Build automated pipelines for building, testing, and deploying code. Topics:
+	1.	What is CI/CD and its importance
+	2.	CI vs CD vs Continuous Deployment
+	3.	CI/CD pipeline stages, SDLC stages (Build → Test → Deploy → Monitor)
+	4.	Azure DevOps:
+	•	YAML, JSON basics
+	•	Pipelines and YAML syntax
+	•	Integration with repos and releases
+
+practice on azure devops tool, running builds on pipelines
+practice until CI
+when we run commit the build phases should automatically run
+
+https://www.youtube.com/watch?v=4BibQ69MD8c
+https://youtu.be/0qANFAN2HPw?si=F1QVumWBNGOjOr6N
+
+https://aka.ms/azpipelines-parallelism-request

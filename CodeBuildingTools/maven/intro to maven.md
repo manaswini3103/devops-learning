@@ -119,9 +119,137 @@ Example: A company’s internal Nexus server at http://nexus.company.com/reposit
 
 | Command                 | Description                                                                 |
 |-------------------------|-----------------------------------------------------------------------------|
-| `mvn clean`             | Deletes the `target` folder (cleans up old builds).                         |
-| `mvn compile`           | Compiles source code only.                                                  |
+| `mvn validate`          | It checks whether the Maven project is correctly configured.                |
+| `mvn compile`           | Compiles main source code only.                                             |
 | `mvn test`              | Compiles the code and runs unit tests.                                      |
 | `mvn package`           | Creates the JAR/WAR file in the `target` directory.                         |
 | `mvn install`           | Packages the project and copies the JAR to the local `~/.m2` repository.    |
 | `mvn dependency:tree`   | Displays the full dependency tree (useful for debugging conflicts).         |
+| `mvn clean`             | Deletes the `target` folder (cleans up old builds).                         |
+
+
+1. PS C:\Users\chennasa\OneDrive - CDK Global LLC\Documents\GIT\onlinebookstore> mvn validate
+[INFO] Scanning for projects... 
+[INFO] 
+[INFO] ------------------< onlinebookstore:onlinebookstore >-------------------
+[INFO] Building onlinebookstore 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.095 s
+[INFO] Finished at: 2026-01-06T19:10:43+05:30
+[INFO] ------------------------------------------------------------------------
+PS C:\Users\chennasa\OneDrive - CDK Global LLC\Documents\GIT\onlinebookstore>
+
+- Scanning for projects... :- Maven looked for a pom.xml
+- <> onlinebookstore:onlinebookstore > :- GroupId: onlinebookstore, ArtifactId: onlinebookstore
+- Building onlinebookstore 0.0.1-SNAPSHOT from pom.xml :- Maven successfully read pom.xml and version is 0.0.1-SNAPSHOT
+- [ war ] :- This is a WAR project, It is meant to be deployed on an application server (Tomcat, etc.)
+- BUILD SUCCESS :- pom.xml is valid, Project structure is correct and No configuration errors
+- mvn validate checks whether the project’s configuration and structure are correct without performing compilation or packaging.
+
+2. mvn compile  
+- Running mvn compile downloaded required plugins and dependencies, copied resources, compiled Java source files into class files, and completed successfully with only compatibility warnings related to Java 8 and newer JDKs.
+- It compiles main Java source code of your Maven project. Specifically Compiles files in: src/main/java
+- Uses dependencies defined in pom.xml and Generates .class files.
+- After a successful compile, Maven creates:  
+target/  
+ └── classes/  
+     └── (compiled .class files)  
+- we might see something like below in output  
+**Downloading from central: https://repo.maven.apache.org/maven2/...**  
+**Downloaded from central: ...**  
+  - Maven downloaded: Build plugins (resources, compiler), Project dependencies (PostgreSQL, MySQL, Servlet API) and Transitive dependencies.
+  - This happens only the first time.  
+**Copying 1 resource from src\main\resources to target\classes**
+  - Files from src/main/resources moved to: target/classes  
+**Compiling 34 source files with javac [debug target 1.8] to target\classes**
+  - Java files in src/main/java compiled and Output in target/classes
+- there was three warnings after compliling
+ - [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+ - [WARNING] bootstrap class path is not set in conjunction with -source 8 not setting the bootstrap class path may lead to class files that cannot run on JDK 8  
+ --release 8 is recommended instead of -source 8 -target 1.8 because it sets the bootstrap class path automatically.   
+ - [WARNING] source value 8 is obsolete and will be removed in a future release
+- we fixed by adding **prperties section** - This makes builds consistent across all machines. And used **release** instead of source and target - which allows to Compile as Java 8 and Use modern JDK safely
+  ```XML
+  <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <build>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <version>3.11.0</version>
+              <configuration>
+                  <release>8</release>
+              </configuration>
+          </plugin>
+      </plugins>
+  </build>
+  ```
+- after updating we would run: **mvn compile** or **mvn clean compile** (don't use this if your git repo is in onedrive, avoid the Windows/OneDrive clean failure)
+
+3. mvn test
+Maven will execute these phases in order:
+- validate
+- compile (already done, so it may say “Nothing to compile”)
+- test-compile (compile test classes)
+- test (run unit tests)
+- output:
+[INFO] Scanning for projects...  
+[INFO] ------------------< onlinebookstore:onlinebookstore >-------------------  
+[INFO] Building onlinebookstore 0.0.1-SNAPSHOT [INFO] from pom.xml  
+[INFO] --------------------------------[ war ]---------------------------------  
+Downloaded from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.5.0/  checker-qual-3.5.0.jar (214 kB at 1.9 MB/s)  
+[INFO] --- resources:3.3.1:resources (default-resources) @ onlinebookstore ---  
+[INFO] Copying 1 resource from src\main\resources to target\classes  
+[INFO] --- compiler:3.11.0:compile (default-compile) @ onlinebookstore ---  
+[INFO] Nothing to compile - all classes are up to date  
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ onlinebookstore ---  
+[INFO] skip non existing resourceDirectory C:\Users\chennasa\OneDrive - CDK Global  LLC\Documents\GIT\onlinebookstore\src\test\resources  
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ onlinebookstore ---  
+[INFO] No sources to compile  
+[INFO] --- surefire:3.2.5:test (default-test) @ onlinebookstore ---  
+[INFO] No tests to run.  
+[INFO] BUILD SUCCESS  
+[INFO] Total time: 7.928 s  
+[INFO] Finished at: 2026-01-08T16:50:11+05:30  
+- No tests to run: means src\test\resources → does not exist
+
+4. mvn package
+- Copy web resources from WebContent/ and place the WAR in the target/ folder
+- A new file will be created whith some name as shown below.
+target/  
+ └── onlinebookstore.war  
+- output
+Downloaded from central: https://repo.maven.apache.org/maven2/com/github/jsimone/webapp-runner/8.0.30.2/   webapp-runner-8.0.30.2.jar (9.1 MB at 8.1 MB/s)  
+[INFO] Copying webapp-runner-8.0.30.2.jar to C:\Users\chennasa\OneDrive - CDK Global   LLC\Documents\GIT\onlinebookstore\target\dependency\webapp-runner.jar     
+[INFO] BUILD SUCCESS  
+[INFO] Total time:  27.361 s  
+[INFO] Finished at: 2026-01-08T17:07:51+05:30  
+
+
+5. mvn install 
+- copies the .war file to C:\Users\chennasa\.m2\repository\onlinebookstore\onlinebookstore\0.0.1-SNAPSHOT.
+
+6. To run the application we give:
+- we can only open/access the web application when we run the below command 
+**java -jar target/dependency/webapp-runner.jar --path /onlinebookstore target/onlinebookstore.war** 
+- java: Runs the Java Virtual Machine (JVM).
+- jar: Run the executable JAR file that follows.
+- --path /onlinebookstore: This sets the context path (It’s the URL prefix where your app is accessible. http://localhost:8080/onlinebookstore or http://localhost:8080/onlinebookstore/index.html but we should never give http://localhost:8080/expanded/) of your web application
+- target/dependency/webapp-runner.jar: This is Webapp Runner and lightweight embedded Apache Tomcat. we downloaded it using Maven (maven-dependency-plugin). It allows running a WAR file without installing Tomcat (Tomcat packaged inside a JAR).
+- target/onlinebookstore: This is your web application, It contains: compiled classes, JSPs, web.xml and libraries. created by: mvn package.
+  - usually the name would be "onlinebookstore-0.0.1-SNAPSHOT.war", but it was "onlinebookstore.war" as we have mentioned it in POM.XML build final name.
+- after running the command, when you get the below output and the cursor is not comming out, then we need to open the above link in browser and check whether the application is running in browser.  
+  - INFO: Pausing ProtocolHandler ["http-nio-8080"]  
+  - If we to open the browser we need three things
+    1. web server (Tomcat)
+    2. Your WAR deployed into that server
+    3. The server listening on port 8080
+  - none of those exist unless you run a server.
+- then we can press ctrl+C to come out of that
