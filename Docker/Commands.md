@@ -124,10 +124,4 @@ PORTS
   - :::38080 -> 80/tcp
     - Same mapping for IPv6 (Internet Protocol version 6: a network addressing system used to identify devices on a network and route data across the internet.)
     - Still host port 38080
-- When I ran **docker run mysql**
-2026-01-18 16:49:15+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.5.0-1.el9 started.   2026-01-18 16:49:16+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql' 2026-01-18 16:49:16+00:00   [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.5.0-1.el9 started. 2026-01-18 16:49:16+00:00 [ERROR]  
-[Entrypoint]: Database is uninitialized and password option is not specified You need to specify one of the  following as an environment variable:
- - MYSQL_ROOT_PASSWORD  
- - MYSQL_ALLOW_EMPTY_PASSWORD 
- - MYSQL_RANDOM_ROOT_PASSWORD
-- we need to run **docker run -d -e MYSQL_ROOT_PASSWORD=db_pass123 --name mysql-db mysql**, which deploys a mysql database using the mysql image and named it mysql-db. Also sets the database password to db_pass123. Lookup the mysql image on Docker Hub and identify the correct environment variable to use for setting the root password. To know the env field from within a mysql-db container, run docker exec -it mysql-db env
+

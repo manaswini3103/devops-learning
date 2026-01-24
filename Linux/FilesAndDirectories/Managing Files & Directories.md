@@ -59,7 +59,7 @@ picks the required expression from file and print the output.
 used to search a word in file and replace it with word required to be in output.  
 **syn:** sed [options] 'script' [files]  
 **Ex:**  
-- sed ‘s/old_text/new_text/’ file_name     (s – substitute)  
+- sed ‘s/old_text/new_text/’ file_name     (s – substitute, the test will be chanhged and displayed only in output, doesn't change in actual file)  
 - sed ‘s/old_text/new_text/ig’ file_name   (g : globally changes the value, i:changes the value irrespective of case sensitivity)   
 - sed -i ‘s/old_text/new_text/g’ file_name (-i : makes the changes in the           actual file)  
 - sed -n ‘5,10p’ file_name   

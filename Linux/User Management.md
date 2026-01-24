@@ -7,7 +7,7 @@
 **Normal user**: modify their own files, cannot make system changes  
 **Super user**: modify any file, make system changes  
 - **sudo**: do something as a superuser temporarily.
-    - We need to know our password to login. Only, works if you are allowed in /etc/sudoers.
+    - We need to know our password to login. Only, works if you are allowed in **/etc/sudoers**.
     - And after we are done it’s good to use ‘sudo -k’ to give up those privileges.
     - You stay yourself just the command runs as root.
 - **sudo su**: Become root using your own password
@@ -23,7 +23,7 @@
 
 ## Types of users
 In linux there are 5 types of users
-1. Super or root user: this user is most powerful user/administratoruser
+1. Super or root user: this user is most powerful user/administrator user
 2. System user: user created by softwares/ application
 3. Normal user: normal users are users created by root user
 4. Sudo User: normal user with temporary admin rights via sudo command.
@@ -34,9 +34,9 @@ In linux there are 5 types of users
 2. Secondary Group (Additional Permissions) – commonly used for team-based or system -level permissions (ex: accessing Docker, video devices, etc)
 
 ## User Creation
-- home directory is created(/home/username)
+- home directory is created **/home/username**
 - unique UID & GID are given to user
-- An entry in /etc/passwd and /etc/group, all user info is stored in cat /etc/passwd
+- An entry in **/etc/passwd** and **/etc/group**, all user info is stored in cat /etc/passwd
 - for privilege control /etc/sudoers
 - **syn**: useradd <option> <username>
 

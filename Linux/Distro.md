@@ -2,6 +2,9 @@
 
 Linux comes in many versions called *distros*. They all use the same kernel but include different software and interfaces. Since Linux is open source, anyone can modify and share their own versions.
 
+To know what Linux Distribution we have we can read **cat /etc/os-release**
+
+
 ## Popular Linux Distributions
 
 - **Ubuntu**: One of the most popular and versatile distributions, known for its user-friendliness.

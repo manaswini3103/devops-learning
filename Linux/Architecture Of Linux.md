@@ -31,7 +31,7 @@ It handles low-level tasks like:
 ---
 
 ## 3. Shell
-A command-line interpreter that acts as an interface between user the kernel.  
+A command-line interpreter that acts as an interface between user and the kernel.  
 It takes commands from the user, translates it into intsructions (system calls) that the kernel can understand and execute.
 
 **Examples:** Bash (Bourne Again Shell), Zsh and Ksh

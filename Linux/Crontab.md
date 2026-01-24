@@ -8,7 +8,7 @@
 |-------|---------------------|----------------|
 | MIN   | Minute field        | 0 to 59        |
 | HOUR  | Hour field          | 0 to 23        |
-| DOM   | Day of the month    | 1–31           |
+| DOM   | Date of the month   | 1–31           |
 | MON   | Month field         | 1–12           |
 | DOW   | Day of the week     | 0–6            |
 | CMD   | Any command         | —              |

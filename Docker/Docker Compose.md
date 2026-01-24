@@ -8,7 +8,7 @@ If we needed to set up a complex application running multiple services, a better
 
 This is a sample voting application which provides an interface for a user to vote and another interface to show the results.
 
-Components:  
+### Components:  
 - web application developed in Python to provide the user with an interface to choose between two options a cat and a dog.
 - When you make a selection, the vote is stored in redis (in this case serves as a database in memory).
 - This vote is then processed by the worker, which is an application written in dot net.
@@ -38,7 +38,8 @@ Components:
 - We then connected the user facing applications, which are the voting app and the result app to the front end network and all the components to an internal backend network.
 
 - docker run -d --name redis redis:alpine
-- docker run -d --name clickcounter --link redis:redis -p 8085:5000 kodekloud/click-counter
+- docker run -d --name clickcounter --link redis:redis -p 8085:5000 kodekloud/click-counter  
+`--link <source_container>:<alias>` : Connect the clickcounter container to the already-running redis container, and let clickcounter reach it using the hostname redis
 ```YAML
 version: "2"
 services:

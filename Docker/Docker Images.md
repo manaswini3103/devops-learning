@@ -60,3 +60,11 @@ RUN apt update && \
 ![Docker](../images/multienvvar.jpg)
 
 - To find the environment variable set on a container that's already running, use **docker inspect imagename** command to inspect the properties of a running container under the config section, you will find the list of environment variables set on the container.
+
+- When I ran **docker run mysql**
+2026-01-18 16:49:15+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.5.0-1.el9 started.   2026-01-18 16:49:16+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql' 2026-01-18 16:49:16+00:00   [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.5.0-1.el9 started. 2026-01-18 16:49:16+00:00 [ERROR]  
+[Entrypoint]: Database is uninitialized and password option is not specified You need to specify one of the  following as an environment variable:
+ - MYSQL_ROOT_PASSWORD  
+ - MYSQL_ALLOW_EMPTY_PASSWORD 
+ - MYSQL_RANDOM_ROOT_PASSWORD
+- we need to run **docker run -d -e MYSQL_ROOT_PASSWORD=db_pass123 --name mysql-db mysql**, which deploys a mysql database using the mysql image and named it mysql-db. Also sets the database password to db_pass123. Lookup the mysql image on Docker Hub and identify the correct environment variable to use for setting the root password. To know the env field from within a mysql-db container, run docker exec -it mysql-db env
