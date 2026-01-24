@@ -51,6 +51,7 @@ when we list the files/directories in the path we have downloaded we can find it
 - each server will have one or more IP (unique number), for AWS EC2 instance we’ll have two IP’s one is public IP (if we want access it through internet) and priate IP (we can access it locally)
 - In a server we can run one or more applications and each application should have a unique number called port number (port no.s range from 0 to 65k+).
 - some services run on default port numbers.
+
 | Port Number | Service | Configuration File                  |
 |-------------|---------|-------------------------------------|
 | 21          | FTP     | —                                   |
