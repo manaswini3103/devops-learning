@@ -147,20 +147,33 @@ git init
 git remote add origin <link> #get the link from the code section of the new remote repo which we created
 ```
 - Then we use **push** command to push the changes to Remote repo.
+- Changing the URL of an existing remote called origin, origin must already exist, You are updating where origin points to, No new remote is created
+```bash
+git remote set-url origin https://github.com/manaswini3103/MavenHelloWorld
+```
+origin → https://github.com/manaswini3103/MavenHelloWorld (current mapping)
+origin → https://github.com/manaswini3103/devops-learning.git (previous mapping)
+- PS C:\Users\chennasa\OneDrive - CDK Global LLC\Documents\GIT\devops-learning> **git remote -v**
+origin  https://github.com/manaswini3103/devops-learning.git (fetch)
+origin  https://github.com/manaswini3103/devops-learning.git (push)
+
 
 ## pull
 
-It's used to fetch and download content/changes made in Remote repo and update them in Local repo to match both the contents.  
-Updates and existing Local repo with the changes made in Remote repo.
+It's used to fetch and download content/changes made in Remote repo and update them in Local repo to match both the contents. Updates and existing Local repo with the changes made in Remote repo.
+
+git pull is actually a shortcut for two Git commands combined:  
+```bash
+git fetch <remote> <branch>
+git merge <remote>/<branch>
+```
+- fetch downloads the latest changes from the remote repository.
+- merge integrates those changes into your current branch.
 
 ```bash
 git pull origin main
 ```
 
-git remote -v
-git remote set-url origin https://github.com/manaswini3103/MavenHelloWorld
-git branch -M main
-git push -u origin main
 
 ## commit vs tag
 
@@ -170,4 +183,10 @@ git push -u origin main
 | Changes over time?  | Yes, new commits are created          | No, tag stays fixed                 |
 | Has message?        | Yes (commit message)                  | Yes, if it's an annotated tag       |
 | Used for?           | Every change you make                 | Marking releases or milestones      |
-| Identified by       | Long hash (e.g., a1b2c3...)           | Friendly name (e.g., v1.0)
+| Identified by       | Long hash (e.g., a1b2c3...)           | Friendly name (e.g., v1.0)          |
+
+## Git Push failure
+- When we get this type errors while pushing code to git  
+RPC failed; curl 55 Send failure  
+fatal: the remote end hung up unexpectedly  
+then give this command: **git config --global http.postBuffer 524288000**

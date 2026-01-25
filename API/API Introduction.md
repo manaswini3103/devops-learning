@@ -16,8 +16,14 @@
 
 <img width="778" height="330" alt="image" src="https://github.com/user-attachments/assets/039953aa-760c-4a9a-93d8-c8d3360c4297" />
 
-
-
 ### Example  
 Computer A asks Computer B to execute `add(5, 6)`.  
 Computer B performs the calculation and returns the result to Computer A.
+
+## XML (Extensible Markup Language)
+```XML
+<fridge content>
+   <item> butter </item>
+   <item> jam </item>
+</fridge content>
+```

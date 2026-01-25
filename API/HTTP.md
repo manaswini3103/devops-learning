@@ -1,12 +1,14 @@
 
 # HTTP
 
-- when the client sends the message to the server using http, we refer the msg as “Http request” and the response that is sent by server is called “Http response.”
+- when the client sends the message to the server using http, we refer the msg as “Http request” and the response that is sent by server is called “Http response”.
+- we could go to this website "https://car-fleet-management.herokuapp.com/swagger-ui.html" and practice, before that we need to download and login in to postman.
 
 
 ## HTTP Request Message
 
 The request message contains the following parts:
+- we can see in console option that what we have requested for
 
 - **URL** (e.g., `https://www.facebook.com`)
 - **Request Method** (e.g., `POST`)
@@ -36,7 +38,7 @@ Address pointing to the latest US National Public Radio (NPR) news:
 The request method indicates the intention of the client.
 
 #### **GET**
-Used to retrieve existing data.
+Used to retrieve existing data. We can give the URL "www.google.com" and in response we could see google search opened.
 
 Examples:  
 1. When browsing the internet, the browser sends GET requests to fetch the latest information.  
@@ -45,6 +47,7 @@ Examples:
 #### **POST**
 - Used to create a new database.
 - If the ID matches with the existing database it would update the entry with that ID.
+- we could go to "httpbin.org/anything" website and in Body section add some text and send it, then in response we could see that text was added. We can give that same text in JSON format so that the server can understand it.
 
 Example:  
 - Adding items to a cart or placing an order — this information is posted to the server.

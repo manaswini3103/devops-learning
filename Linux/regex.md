@@ -7,8 +7,8 @@
 1.  .	It is called a wild card character, It matches any one character other than the new line.
 2.  ^	It matches the start of the string.
 3.  $	It matches the end of the string.
-4.  *	It matches up to zero or more occurrences i.e. any number of times of the character of the string.
-5.  +   1 or more occurrences
+4.  `*`	It matches up to zero or more occurrences i.e. any number of times of the character of the string.
+5.  `+`   1 or more occurrences
 6.  ?	0 or 1 occurrences
 7.  \	It is used for escape following character.
 8.  ()	It is used to match or search for a set of regular expressions.

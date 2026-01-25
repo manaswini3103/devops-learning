@@ -2,6 +2,8 @@
 
 - **Query** – used to search  
 - **Parameter** – a value used to refine or filter the search
+- If we search for api in Google, in URL we'll get something like this "https://www.google.com/search?q=api", if we remove 'q' part from URL and if we change name of the parameter 'q' to something else, then it would throw 404 Not found error.
+- There is always a predefined set of query parameters that are accepted by the server, if change that parameter it can't recognize it.
 
 ![Query Parameter](../images/Picture1.png)
 
