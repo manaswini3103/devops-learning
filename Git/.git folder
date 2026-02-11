@@ -1,0 +1,65 @@
+# .git folder
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----l         12/5/2025   6:38 PM                hooks
+d----l         12/5/2025   6:38 PM                info
+d----l         12/5/2025   6:38 PM                logs
+d----l         1/25/2026   6:40 PM                objects
+d----l         12/5/2025   6:38 PM                refs
+-a---l         1/25/2026   6:40 PM             20 COMMIT_EDITMSG
+-a---l         1/13/2026  12:52 AM            397 config
+-a---l        11/25/2025   1:05 AM           (73) description
+-a---l        12/13/2025   7:33 PM            108 FETCH_HEAD
+-a---l         1/13/2026  12:50 AM             21 HEAD
+-a---l         1/25/2026   6:40 PM          17552 index
+-a---l        12/15/2025   5:41 PM             41 ORIG_HEAD
+-a---l        11/25/2025   1:05 AM            112 packed-refs
+
+## How git commands touch .git
+
+| Command        | What changes                         |
+| -------------- | ------------------------------------ |
+| `git add`      | `index`, `objects/`                  |
+| `git commit`   | `objects/`, `refs/`, `HEAD`, `logs/` |
+| `git checkout` | `HEAD`, working tree                 |
+| `git branch`   | `refs/heads/`                        |
+| `git merge`    | `ORIG_HEAD`, `objects/`, `refs/`     |
+| `git fetch`    | `FETCH_HEAD`, `refs/remotes/`        |
+| `git push`     | `refs/`, remote updates              |
+
+1. objects/ 
+- The heart of Git, Stores all data: commits, files, trees, blobs. Used by basically everything
+- Inside: File contents (blobs), Directory structures (trees), Commits (metadata + pointers)
+- Git is a content-addressable database — objects are named by SHA-1/SHA-256 hashes.
+
+2. refs/
+- A branch is just a pointer to a commit, Human-readable references to commits.
+- Contains:
+refs/  
+ ├─ heads/     # local branches  
+ ├─ remotes/  # remote branches  
+ └─ tags/     # tags  
+- HEAD — Where you are right now, Points to current branch or commit. Example: ref: refs/heads/main
+When you commit, Git updates: HEAD → branch → new commit. Detached HEAD? This file points directly to a commit hash.
+- index — Staging area, Binary file storing what you’ve staged. Flow: Working tree → index → commit. No index changes → nothing to commit.
+
+3. logs/
+- History of movement, Records every change to HEAD and branches.Used by 'git reflog', recovery after mistakes
+- Saved your life if you ran: 'git reset --hard'
+
+- ORIG_HEAD: Before a dangerous move, Backup of HEAD before: merge, ebase, reset. Used by: git merge, git reset, git rebase
+- COMMIT_EDITMSG: Your last commit message, Temporary file holding commit message. Used by 'git commit'. Opened in your editor during commit.
+- FETCH_HEAD — What was fetched, Stores commit(s) fetched from a remote. Used by: 'git fetch, git pull'. Helps Git know what changed remotely.
+
+4. hooks/
+- Automation Scripts Git runs on certain events. Examples: pre-commit, post-commit, pre-push
+- Used by: linting, tests, security checks. Disabled by default unless you add scripts.
+
+5. info/
+- Local-only config, Contains: 'info/exclude'. Acts like '.gitignore' but not committed.
+- Used by: ignoring machine-specific files
+
+- config — Repo configuration, Repository-specific settings. Used by: git remote, git config, authentication and merge rules. Overrides global config for this repo.
+- description — Legacy / cosmetic, Used by old Git web tools. Safe to ignore.
+- packed-refs — Optimized refs, Compressed version of refs/ for performance. Used by: large repos, many branches/tags, Git auto-manages this.

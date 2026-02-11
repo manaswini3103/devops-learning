@@ -21,6 +21,14 @@ All directories and files appear under it as branches.
 Configuration files are typically plain-text files that contain instructions, settings, and values for programs, utilities, and system processes.
 
 ### Common Examples:
+- **/etc/hosts** - tells your system “when I type this hostname, use this IP address from /etc/hosts, it was checked before DNS.  
+```bash
+# cat /etc/hosts
+127.0.0.1 localhost localhost.localdomain localhost4 localhost4.localdomain4
+139.126.109.185 c04ppscnv829.ds.ad.adp.com c04ppscnv829
+```  
+where 127.0.0.1 → loopback (this machine), multiple aliases for localhost and used internally by system.  
+system believes this IP (139.126.109.184) belongs to hostname c04ppscnv829 and its FQDN (Fully Qualified Domain Name is exact name of a computer or service on a network including its domain. It uniquely identifies a host on internet or a private network) is c04ppscnv829.ds.ad.adp.com
 - **/etc/fstab** – Defines file systems to be mounted at boot  
 - **/etc/network/interfaces** *(or Netplan YAML files on newer systems)* – Configures network interfaces  
 - **/etc/ssh/sshd_config** – Configuration for the SSH daemon  

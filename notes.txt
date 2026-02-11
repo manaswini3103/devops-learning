@@ -120,3 +120,15 @@ creating docker files
 - common error and troubleshooting for docker file failures
 
 cloud basics, theory
+
+azcli
+git merge rebase, .git folder
+/etc/hosts
+virtualization and before Dockerization
+example: container and ships
+Docker Deamen: docker client
+docker architecture
+base image in Docker Hub
+Azure functions (Azure cloud)
+how to call azure devops api's in python
+how to hit an api through pythona

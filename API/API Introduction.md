@@ -21,9 +21,15 @@ Computer A asks Computer B to execute `add(5, 6)`.
 Computer B performs the calculation and returns the result to Computer A.
 
 ## XML (Extensible Markup Language)
+
+![API](../images/apixml.jpg) 
+
 ```XML
 <fridge content>
    <item> butter </item>
    <item> jam </item>
 </fridge content>
 ```
+
+## SOAP(Siple Object Access Protocol)
+- successor of XML-RPC, uses XML to send and retrieve messages

@@ -1,0 +1,18 @@
+{
+  "bookings": [
+    {
+      "id": 2,
+      "title": "Client Call",
+      "date": "2026-02-05",
+      "start_time": "14:00",
+      "end_time": "15:30"
+    },
+    {
+      "id": 3,
+      "title": "updates",
+      "date": "2026-02-07",
+      "start_time": "10:00",
+      "end_time": "11:00"
+    }
+  ]
+}

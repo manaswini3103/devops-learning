@@ -16,16 +16,35 @@
 - Containers have existed for about 10 years now and some of the different types of containers are LXC, LXD, LXCFS etc. Docker utilizes LXC containers.
 - setting up  container environments is hard as they are very low level. That is where Docker offers a high level tool with several functionalities making it easy for end users like us.
 
-### container vs Virtual Machines
+### Dockerizatoion/containerization vs Virtualization
+
+#### Virtualization
+Running multiple virtual machines (VMs) on one physical computer. Each VM: has its own OS, thinks it has its own hardware and is fully isolated.
+
+- One physical server running:  
+VM1 → Linux + Apache  
+VM2 → Linux + MySQL  
+VM3 → Windows + IIS  
+Each VM boots like a real computer.
+- Pros: Strong isolation, Can run different OSes, Secure
+- Cons: Heavy (each VM has an OS), Slow startup, High memory usage
+
+#### Dockerization (containers)
+Running applications in containers that share the same OS kernel. Containers: Do NOT have a full OS, Only contain the app + dependencies, Are lightweight and fast.
+- Example: One Linux server running  
+Container 1 → Nginx  
+Container 2 → MySQL  
+Container 3 → Python app  
+- Pros: Very fast startup (seconds), Uses less memory, Easy to move between systems, “Works on my machine” problem solved
+- Cons: Weaker isolation than VMs, Same OS kernel only
 
 ![Docker](../images/vmvscontainer.jpg)
 
-### Containers and Virtual Machines
+- Now when you have large environments with thousands of applications, containers running on thousands of docker hosts, you will often see containers provisioned on virtual docker hosts.
+- We can use the benefits of virtualization to easily provision or decommission docker hosts as required.
 
 ![Docker](../images/vmandcontainer.jpg)
 
-- Now when you have large environments with thousands of application containers running on thousands of docker hosts, you will often see containers provisioned on virtual docker hosts.
-- We can use the benefits of virtualization to easily provision or decommission docker hosts as required.
 - At the same time make use of Docker to easily provision applications and quickly scale them as required.
 - In this case we will not be provisioning many VMs as we used to provision VM for each application. Now we may provision a VM for hundreds or thousands of containers.
 
@@ -42,6 +61,34 @@
 
 
 ## Before Docker
+
+1. Physical servers (oldest method)
+- How it worked: One app per server, One OS per server
+- Example: considering container and ship example (Goods packed in boxes, barrels, bags and eery ship handled cargo differently)
+Server 1 → App 1  
+Server 2 → App 2  
+- Problems: Very expensive, Wasted resources, Slow scaling, Apps installed manually, Different dependencies, “Works on my machine” and Hard deployments
+
+2. Virtual Machines (pre-Docker era)
+- Improvement: Multiple apps via multiple VMs on one server
+- Still problems: Heavy, Slow provisioning, OS duplication, takes more space
+- example of container and ship (Ship is divided into fully separate rooms, Each room is like a small ship, Heavy but isolated)
+
+3. Configuration management (before containers)
+- Apps were installed directly on servers using: Shell scripts, Ansible, Puppet, Chef
+- Example: 'yum install nginx', 'pip install flask'
+- Problems: Dependency conflicts, Hard to reproduce, “It works on my server”
+
+4. Early container ideas (Docker’s ancestors)
+- Before Docker, we had: chroot, FreeBSD Jails, Solaris Zones, LXC (Linux Containers)
+- They existed, but were: Hard to use, Not standardized, Not developer-friendly
+- Docker made containers easy and popular
+- Example of container and ship (Cargo packed in standard containers, Same size, same handling, Easy to move between ships)
+
+## One mental picture (remember forever)
+- Physical Server  →  One house
+- Virtual Machine  →  Multiple houses
+- Docker Container →  Apartments in one building
 
 - Suppose there are three developers in a team working on a single project.
 - Meanwhile, each one of them has a Windows, Linux and MacOS.

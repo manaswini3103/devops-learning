@@ -133,7 +133,11 @@ git push
 This is used to create a new Git repository in Local machine.
 1. git init
 2. git remote add origin `<link>`
-3. git remote -v (to verify remote)
+3. git remote -v (to verify remote, Tell us where our code is pulled from and pushed to and shows all remote repositories connected to our local Git repo and their URLs)
+```perl
+origin  https://github.com/user/project.git (fetch)
+origin  https://github.com/user/project.git (push)
+```
 
 - We can creat a directory in VS code terminal using `mkdir dirname`.
 - If we list that directory we'll not get **.get** folder. so we'll give the following command to create the **.git** folder.  

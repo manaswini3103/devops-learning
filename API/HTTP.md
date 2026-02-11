@@ -2,7 +2,7 @@
 # HTTP
 
 - when the client sends the message to the server using http, we refer the msg as “Http request” and the response that is sent by server is called “Http response”.
-- we could go to this website "https://car-fleet-management.herokuapp.com/swagger-ui.html" and practice, before that we need to download and login in to postman.
+- we could go to this website "https://car-fleet-management.herokuapp.com/swagger-ui.html#/Cars/getCarsUsingGET" and we need to install postman.
 
 
 ## HTTP Request Message
