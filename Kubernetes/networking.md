@@ -1,0 +1,23 @@
+- We will start with a single node with IP 192.168.1.2 in Kubernetes cluster. We use this IP to access the Kubernetes node by doing SSH into it, etc..
+- If we are using a minikube setup, then IP of minikube VM inside your hypervisor and our laptop may have a different IP, like 182.168.1.1. So, it's important to understand how our VMs are set up.
+- On the single node Kubernetes cluster, we have created a single pod which hosts a container and an IP (10.244.0.2) is assigned to pod.
+- So how is it getting this IP address when Kubernetes is initially configured?  
+  - We create an internal private network with the address 10.244.0.0, and all the pods are attached to it.
+  - When you deploy multiple ports, they all get a separate IP assigned from this network.
+  - The pods can communicate to each other through this IP, but accessing the other pods using this internal IP may not be a good idea, as they change when pods are recreated.
+- How does it work when we have multiple nodes in cluster?
+  - We have two nodes running Kubernetes and they have IP assigned to them.
+  - They are not part of the cluster yet each of them has a single pod deployed.
+  - These pods are attached to an internal network and they have their own IP.
+  - The two networks have an address 10.244.0.0, and the pods deployed have the same address two.
+  - This is not going to work well when the nodes are part of the same cluster. pods have same IP whichwill lead to IP conflicts in the network.
+- When a Kubernetes cluster is set up, it does not automatically handle these networking issues. It expects us to set up networking to meet certain fundamental requirements such as:
+  - All containers or pods in a Kubernetes cluster must be able to communicate with one another without having to configure Nat.
+  - All nodes must be able to communicate with containers, and all containers must be able to communicate with the nodes in the cluster.
+- We don't have to set it up all on our own as there are multiple pre-built solutions available like Cisco ACI networks, cilium, Big Cloud Fabric, flannel, VMware, NZXT, and calico.
+- Depending on the platform you're deploying your Kubernetes cluster on, you may use one of these solutions. 
+  - For example, if you set up a Kubernetes cluster from scratch on your own systems, you may use any of the solutions like calico or flannel, etc..
+  - If you were deploying on a VMware environment, NZXT may be a good option.
+  - If you look at the play with K8's labs, they use WaveNet as their networking solution.
+- So back to our cluster with custom networking either Flannel or Calico setup. It now manages the networks and IPs in nodes and assigns a different network address for each network in the node.
+- This creates a virtual network of all pods and nodes, where they are all assigned a unique IP address, and by using simple routing techniques, the cluster networking enables communication between the different pods or nodes to meet the networking requirements of Kubernetes.

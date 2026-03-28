@@ -24,7 +24,7 @@
   root          2      0  0  2024 ?        00:00:09 [kthreadd]  
   root          6      2  0  2024 ?        00:55:52 [ksoftirqd/0]
   - PPID is the parent process ID, PID – process ID, whenever a user is logged in, a PID will be created.
-  - PID 1 → systemd, systemd starts other processes, those start more processes whcih forms a process tree.
+  - PID 1 → systemd, systemd starts other processes, those start more processes which forms a process tree.
   - if we want to get the information for particular process give **ps -ef | grep ssh**
   - If we want to stop the service, we can give “service http stop”, but if it’s still not stopped. Then we can go for kill option  
   ex: kill PID  

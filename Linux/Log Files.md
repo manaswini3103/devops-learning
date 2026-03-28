@@ -1,6 +1,6 @@
 # Log Files and Troubleshooting
 - Log management is the process of collecting, storing, analyzing, and rotating logs. It helps administrators keep track of system events, while ensuring that old logs are safely archived or removed.
-- Logs will be stored in /var/log it’s the mail path.
+- Logs will be stored in /var/log it’s the main path.
 
 ## Common Log Files in Linux
 - **/var/log/syslog**  : General system messages and events.

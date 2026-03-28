@@ -19,7 +19,7 @@ It handles low-level tasks like:
 - Process Management: Manages execution and termination of processes, allowing multiple applications to run concurrently.
 - Memory Management: Handles allocation and deallocation of memory.
 - Device Management: Interacts with hardware through specific device drivers which are loaded as modules into kernel.
-- File System Management: Manages how data is stored, retrived and organized on storgae devices.
+- File System Management: Manages how data is stored, retrived and organized on storage devices.
 - Networking: Manages network communication and protocols (like TCP/IP)
 
 ### **Types of Kernels**

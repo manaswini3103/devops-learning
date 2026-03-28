@@ -120,6 +120,7 @@ git commit
 ```
 
 ### 4. Rebase and Merge
+- Rebase = rewrite history by moving or modifying commits
 - Replays the commits of a branch on top of another branch.
 - Produces a linear commit history.
 - Does not create a merge commit.
@@ -127,10 +128,51 @@ git commit
 ![DevOps Tools Pipeline](../images/rebasemerge.jpg)
 
 #### Example
+1. to fix the secret
+- if we made 4 commits, let us assume out of those 3rd one is a bad commit which has some secret in it which be pushed to git. Then we can give the following commands:
 ```bash
+git rebase -i HEAD~N # Lets you edit last N commits
+# In our case it was 3rd commit so we are giving up to 4 commits
+git rebase -i HEAD~4  # then an editor opens, then we need to change the 3rd commit or by it's hash from 'pick' to 'edit 3/hash' and Open the last 4 commits in interactive mode so I can edit/rewrite them
+git rebase -i hash~1
+# this will bring back before that bad commit, then we'll make the necessary changes to remove the bad commit
+git add .
+git commit --ammend
+git rebase --continue
+git push --force-with-lease
+```
+2. Delete a bad commit completely
+```bash
+git rebase -i HEAD~3
+# then editor mode opens, we'll replace that particular bad commit from 'pick' to 'drop' which will delete that bad commit
+```
+3. Combine commits (clean history) A → (B + C combined)
+```bash 
+git rebase -i HEAD~2 #pick B - squash C
+```
+4. Change commit message
+```bash
+git rebase -i HEAD~1 # pick → reword
+```
+5. Move commits to another branch
+Moves your commits on top of latest main
+```bash
+git checkout feature
 git rebase main
-git checkout main
-git merge feature-branch
+```
+
+**common commands**
+```bash
+git status              # see what's happening
+git rebase --continue   # after fixing
+git rebase --abort      # cancel everything, it may ask for option (y/n), we can type y
+rm -rf .git/rebase-merge # Manually remove the rebase state or use this for power shell 'Remove-Item -Recurse -Force .git\rebase-merge'
+git rebase --skip       # skip current commit
+git commit --amend      # modify commit
+git reflog              # recovery latest commit made after the bad commit, give that command and Look for the commit before you did the reset (your lost work).
+git reset --hard <hash> # recovery the has of the commit that we found in the above command
+git branch backup-save <that-commit-hash> # creates a backup so that we won't loose the work that we have done
+git branch backup-safe  # creates a permanent backup
 ```
 
 ### 5. No-FF (No Fast-Forward) Merge
@@ -143,3 +185,11 @@ git merge feature-branch
 ```bash
 git merge --no-ff feature-branch
 ```
+
+## rebase vs merge
+
+| Use rebase     | Use merge          |
+| -------------- | ------------------ |
+| clean history  | preserve history   |
+| fix commits    | team collaboration |
+| before pushing | shared branches    |

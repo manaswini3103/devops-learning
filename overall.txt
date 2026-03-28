@@ -1,0 +1,97 @@
+DevOps I Engineer Skillset topics
+
+  💻 1. Basic Operating Systems (Linux / Unix)
+Goal: Gain comfort in navigating, managing, and troubleshooting Linux systems. Topics:
+1. Introduction to Linux architecture (Kernel, Shell, File System)
+2. Brief Linux distributions (Ubuntu, CentOS, Alpine, etc.)
+3. File system hierarchy and permissions (ls, cd, chmod, chown)
+4. File operations (cat, cp, mv, rm, grep, find, awk, sed)
+5. User and group management (useradd, passwd, sudo)
+6. Process and service management (ps, top, kill, systemctl)
+7. Networking commands (ifconfig, netstat, ss, curl, ping, scp, ssh)
+8. Package management (apt, yum, dnf)
+9. Environment variables and shell scripting basics
+10. Log files and troubleshooting (journalctl, /var/log/)
+11. Disk usage and system monitoring (df, du, free, uptime)
+12. Cron jobs and automation
+
+🔄 2. CI/CD Pipeline Development (Azure DevOps)
+Goal: Build automated pipelines for building, testing, and deploying code. Topics:
+1. What is CI/CD and its importance
+2. CI vs CD vs Continuous Deployment
+3. CI/CD pipeline stages, SDLC stages (Build → Test → Deploy → Monitor)
+4. Azure DevOps:
+    * YAML, JSON basics
+    * Pipelines and YAML syntax
+    * Integration with repos and releases
+
+🧭 3. DevOps Principles
+Goal: Understand DevOps culture, automation, and delivery mindset. Topics:
+1. What is DevOps — history and evolution
+2. Core principles: Collaboration, Automation, Continuous Feedback
+3. DevOps lifecycle stages (Plan, Code, Build, Test, Release, Deploy, Operate, Monitor)
+4. CI/CD automation overview
+5. Infrastructure as Code (IaC) introduction
+6. Immutable infrastructure concept
+7. Configuration management and containerization
+8. Monitoring and feedback loops
+9. Communication and collaboration (Agile, Scrum)
+10. DevOps toolchain overview
+
+🔐 4. DevSecOps
+Goal: Integrate security into DevOps workflows (shift-left approach). Topics:
+1. What is DevSecOps and why it matters
+2. Security in SDLC — shifting left
+3. Static Application Security Testing (SAST) tools (SonarQube)
+4. Dynamic Application Security Testing (DAST)
+5. Dependency scanning (Trivy)
+6. Container security and image scanning
+7. Secrets management (Vault, Azure Key Vault, AWS Secrets Manager)
+8. Role-Based Access Control (RBAC)
+9. Secure CI/CD pipelines
+
+🐍 5. Programming (Python / JavaScript)
+Goal: Automate workflows and build scripts for CI/CD and infrastructure. Python Topics:
+1. Python syntax and structure (variables, loops, conditionals)
+2. Functions, modules, and packages
+3. File and directory handling
+4. Working with JSON, YAML
+5. REST API calls with requests
+6. OS and subprocess modules for automation
+7. Logging and exception handling
+8. Writing automation scripts (build, deploy, test)
+9. Using Python for K8s:
+    * Kubernetes client API
+10. Packaging and virtual environments (pip, venv, requirements.txt)
+JavaScript (optional alt for frontend/backend automation):
+1. Node.js basics
+2. npm scripts and modules
+
+🌿 6. Version Control & Branching Strategies (Git)
+Goal: Master Git fundamentals and collaborative branching models. Topics:
+1. What is Version Control and Git architecture
+2. Git basic commands (init, clone, status, add, commit, push, pull)
+3. Working with branches (branch, checkout, merge, rebase)
+4. Git workflow models:
+    * Centralized
+    * Feature Branch
+    * Gitflow
+    * Trunk-based development
+5. Pull Requests and Code Reviews
+6. Merge conflicts — how to resolve them
+7. Git tags and releases
+8. Reverting and resetting commits
+9. Using .gitignore
+10. GitHub / Azure Repos practical workflow
+
+
+☁️ 7. Cloud Infrastructure (AWS / Azure / GCP)
+Goal: Understand cloud fundamentals and deploy basic workloads. Topics:
+1. Cloud computing basics (IaaS, PaaS, SaaS)
+2. Regions, Availability Zones, and global architecture
+3. Compute: EC2 / VM / Compute Engine
+4. Networking: VPC, Subnets, Security Groups, Load Balancers
+5. Storage: S3 / Blob / GCS Buckets
+6. IAM (Users, Roles, Policies)
+7. Cloud CLI and SDK usage
+8. Provisioning in
