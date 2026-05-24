@@ -103,9 +103,9 @@ A method where each release gets its own branch.
 
 **How it works**
 
-- A release branch is created from the main development branch (e.g., develop)
-- when a release is imminent. Bug fixes and minor adjustments are applied to this branch until the release is ready
-- After which it's merged into the main production branch (e.g., master) and often back into the development branch.
+- A release branch is created from the main development branch (main → development continues)
+- when a release is imminent. Bug fixes and minor adjustments are applied to this branch until the release is ready (release/v1, release/v2 → each version of the product)
+- After which it's merged into the main production branch (e.g., master) and often back into the development branch. (Bug fixes can be applied to older releases easily)
 
 **When to use**
 

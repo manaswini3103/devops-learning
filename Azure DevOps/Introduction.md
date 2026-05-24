@@ -47,7 +47,7 @@ Used to host code in private Git repos (GitHub, GitLab, BitBucket,...). Differen
 
 ### Azure Pipelines – Build & Deploy Automatically (CI/CD)
 
-- After the code is merged to main branch, we want to realease this new feature to end users, but before that we need to test code changes, if everything is fine produce and artifact that wd can deploy.
+- After the code is merged to main branch, we want to realease this new feature to end users, but before that we need to test code changes, if everything is fine we produce an artifact that we can deploy.
 - We have Azure Pipelines for building CI pipeline, by writing pipelines in YAML file.
 - We can host this pipeline configuration (YAML file) with rest of the our application code in Git project.
 - Uses **Steps** (smallest building block of pipelines, can be scripts/tasks).

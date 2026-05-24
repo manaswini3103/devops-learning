@@ -26,5 +26,5 @@ We have code in local machine and we wanted to build wep application. How we dep
 - To keep our Devops application running on server and access it from anywhere, we should first build the code so that the build files will be generated. The generated WAR file should be placed into Application/web server so that we can access it through internet using URL(IPadress/portnumber).
 - Application server can start at any port in hosted server and can be accessed through  
 HostedServerIpAddress: portnumber
-- We can map that port number to any custom Domain name and access application server with that Domain name. We can but the Domain Names from different websites like GoDaddy and can map IP adress of our application to that name and access through internet by giving that name.
+- We can map that port number to any custom Domain name and access application server with that Domain name. We can buy the Domain Names from different websites like GoDaddy and can map IP address of our application to that name and access through internet by giving that name.
 - Tomcat server will actually listen at port 8080 in our machine. Any machine can be uniquely identified by IP address.

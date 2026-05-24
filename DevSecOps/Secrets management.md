@@ -31,8 +31,7 @@ Best practice: store secrets in a centralized secrets manager
 - Applications authenticate to the secrets manager (IAM, Managed Identity, tokens)
 - Secrets are fetched at runtime
 - Access is logged and audited
-- Secrets can be rotated automatically  
-secrets like passwords, API keys, or credentials are changed on a regular schedule without manual human intervention, and all systems that use those secrets are updated automatically.
+- Secrets can be rotated automatically: secrets like passwords, API keys, or credentials are changed on a regular schedule without manual human intervention, and all systems that use those secrets are updated automatically.
 
 ## Tools
 

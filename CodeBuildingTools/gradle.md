@@ -91,6 +91,7 @@ Gradle has a rich ecosystem of plugins (both official and third-party) that exte
 
 | Command             | Purpose                                        |
 | ------------------- | -----------------------------------------------|
+| gradle -v           | gives the gradle version                       |
 | gradle build        | Build project completely                       |
 | gradle clean        | Remove old build files                         |
 | gradle clean build  | Performs a clean build from scratch            |
@@ -103,6 +104,8 @@ Gradle has a rich ecosystem of plugins (both official and third-party) that exte
 | gradle wrapper      | Creates Gradle Wrapper files                   |
 | gradle init         | Sets up a Gradle project for you automatically |
 |.\gradlew clean build| ./ runs in windows power shell                 |
+
+- gradlew -v : checks if gradle is installed required by the project. If not present, it automatically downloads that Gradle version. Gradle is downloaded per project, not installed system-wide. The downloaded Gradle lives in: `~/.gradle/wrapper/dists/`
 
 
 # Maven vs Gradle

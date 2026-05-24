@@ -39,7 +39,7 @@ AN event that takes place when Git is unable to automatically resolve difference
 ```html
 <p> This is a new feature (button) </p>
 ```
-`git commit -am "made changes to main`
+`git commit -am "made changes to main"`
 
 **Index.html (of feature branch)**
 
@@ -47,7 +47,7 @@ AN event that takes place when Git is unable to automatically resolve difference
 ```html
 <p> This is a new feature (dropdown) </p>
 ```
-`git commit -am "made changes to feature`
+`git commit -am "made changes to feature"`
 
 - Then give `git diff main` to know differences between two branches
 - And give `git merge main`, it'll throw merge conflict

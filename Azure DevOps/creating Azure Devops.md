@@ -23,20 +23,20 @@
 
 # Running code using Application Server
 
-- After createing project, we need to download maven project from any online repo (https://github.com/rahulshettyacademy/MavenHelloWorld) or create it and build it to get the war file.  
+- After creating project, we need to download maven project from any online repo (https://github.com/rahulshettyacademy/MavenHelloWorld) or create it and build it to get the war file.  
 **In VS code**  
   - git clone https://github.com/rahulshettyacademy/MavenHelloWorld
   - Go to github, create a new repostory with the same name as online repo, come to VS code go to that repo.
   - git remote -v (Lists all configured remotes and their URLs, -v means verbose → show more details.)
   - git remote set-url origin https://github.com/manaswini3103/MavenHelloWorld (Changes URL of an existing remote.)
-  - git branch -M main (renames amster branch with main branch)
+  - git branch -M main (renames master branch with main branch)
   - git push -u origin main
   - Or we can go to github repositories, click on create new repositry then click on import a repositoy and copy the URL of the repository that you want to import 
   - then run: mvn clean install
   - we will get the .war file inside webapp>target folder.
 - We need to download a application server, we are downloading apache tomcat. Go to this website https://tomcat.apache.org/download-90.cgi and download 64bit windows zip according to the windows configuration.
 - unzip the file to desired folder in program files and place the .war file in **webapps** folder.
-- Then we need to start the application server, got to bin folder and double click on **startup** file.
+- Then we need to start the application server, go to bin folder and double click on **startup** file.
 - Then a terminal will open and server will be starting, if we get any error stating port 8080 is already blocked give the below commands taken from stack overflow:  
 netstat -ano | findstr :8080  
 taskkill /PID processID(1234) /F  
@@ -49,7 +49,7 @@ and trigger the startup file again
 - So when we change something in the code and commit it, automatically the build should be triggered means it should test and run making sure nothing is breaking with the new changes.
 - And run **mvn clean install** and a **.war** file should be created for deploying into application server.  
 ![DevOps Tools Pipeline](../images/CIandCD.jpg)
-- Go to the Azure Devops Organization, and your project click, go to pipelines and create a new pipelines,  select GitHub -> repository -> configure your pipeline (select maven) -> output: a YAML file is created (we can change the **pool name** and **JDK version** if it not matching according to our requirements) -> save it, commit to main branch -> then the created YAML file will be commited to our Git repo.
+- Go to the Azure Devops Organization, and your project. Then go to pipelines and create a new pipelines,  select GitHub -> repository -> configure your pipeline (select maven) -> output: a YAML file is created (we can change the **pool name** and **JDK version** if it not matching according to our requirements) -> save it, commit to main branch -> then the created YAML file will be commited to our Git repo.
 - Then run the pipeline by selecting our branch, we could get an error like below, then we need to fill a form by going to https://aka.ms/azpipelines-parallelism-request or wan create our own agent.  
 ![DevOps Tools Pipeline](../images/error.jpg)
 
@@ -134,7 +134,7 @@ steps:
 `$(build.artifactstagingdirectory)`: local path on the agent, where any artifacts are copied to before being pushed to their destination(C:\agent\_work\a)
 - Then we need to search for **publish build artifacts**, to get the artifact from 'a' directory to azure pipelines.  
 ![DevOps Tools Pipeline](../images/publish.jpg)  
-then we need to validate and save it, saveing it means committing it to git repo.
+then we need to validate and save it, saving it means committing it to git repo.
 
 ## Release Pipelines
 

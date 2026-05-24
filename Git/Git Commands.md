@@ -30,7 +30,7 @@ git status
 1. **untracked**: These are the new files that git doesn't yet track.
 2. **modified**: when we change something in the existing files.
 3. **staged**: When we add the changes of the file and it's ready to be commitied.
-4. **unmodified**: whne nothing is changed.
+4. **unmodified**: when nothing is changed.
 
 ## add
 
