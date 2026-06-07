@@ -144,7 +144,7 @@ These pipelines are generally used to deploy the build Artifacts into Agent mach
 
 - If we want to put our code in Azure repos, go to azure repos and we choose 2nd option
   - git pull origin main (as we changed the the YAML file in GitHub, and we don't have those changes in local)
-  - git remote -v                           
+  - git remote -v                         
     origin  https://github.com/manaswini3103/MavenHelloWorld (fetch)  
     origin  https://github.com/manaswini3103/MavenHelloWorld (push)
   - git remote add origin https://manaswinichenna31@dev.azure.com/manaswinichenna31/AzureDecopsManaswini/_git/AzureDecopsMana…  

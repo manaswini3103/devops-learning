@@ -109,7 +109,7 @@ class Solution:
             if i == 0:
                 return [1] + digits
 sol = Solution()
-print(sol.plusOne([1,2,3,9]))'''
+print(sol.plusOne([1,2,3,9]))
 
 # longest common prefix
 class Solution:
@@ -127,5 +127,12 @@ class Solution:
 
         return strs[0]
 sol = Solution()
-print(sol.longestCommonPrefix(["flows", "flow", "flowsi", "flowig"]))
+print(sol.longestCommonPrefix(["flows", "flow", "flowsi", "flowig"]))'''
+
+class Solution:
+    def reverse(self, arr: list) -> None:
+        return arr[::-1]
+sol=Solution().reverse([1,2,3])
+print(sol)
+
 

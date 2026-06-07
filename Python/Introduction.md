@@ -92,17 +92,167 @@ print((A+txt)*B)
 ```
 
 
-# Arithmatic Operation
+# Operators
+
+1. Arithmetic Operators  
+Used to perform standard mathematical calculations
+- '+' (Addition): Adds values (5 + 3 results in 8).
+- '-' (Subtraction): Subtracts the right value from the left (5 - 3 results in 2).
+- '*' (Multiplication): Multiplies values (5 * 3 results in 15).
+- '/' (Division): Divides and always returns a float (5 / 2 results in 2.5).
+- '//' (Floor Division): Divides and rounds down to the nearest whole integer (5 // 2 results in 2).
+- '%' (Modulus): Returns the remainder of a division (5 % 2 results in 1).
+- '**' (Exponentiation): Raises the left number to the power of the right (5 ** 2 results in 25).
+
+2. Assignment Operators  
+Used to assign and update values stored in variables
+- '=' : Basic assignment (x = 10).
+- '+=' : Adds and assigns (x += 5 is equivalent to x = x + 5).
+- '-=' : Subtracts and assigns (x -= 3 is equivalent to x = x - 3).
+- '*=' : Multiplies and assigns (x *= 2).
+- '/=' : Divides and assigns (x /= 2).
+- ':=' (Walrus Operator): Assigns a value to a variable within an expression.
+
+3. Comparison (Relational) Operators  
+Used to compare two values, returning a Boolean value (True or False):
+- '==' : Equal to.
+- '!=': Not equal to.
+- '>': Greater than.
+- '<' : Less than.
+- '>=' : Greater than or equal to
+- '<=' : Less than or equal to.
+
+4. Logical Operators
+Used to combine conditional statements
+- 'and' : Returns True if both statements are true (x < 5 and x < 10).
+- 'or' : Returns True if at least one statement is true (x < 5 or x > 4).
+- 'not' : Reverses the logical state of the operand (not(x < 5)).
+
+5. Identity Operators  
+Used to check if two variables point to the exact same object location in memory
+- 'is' : Returns True if variables reference the same object (x is y).
+- 'is not' : Returns True if variables reference different objects (x is not y).
+
+6. Membership Operators  
+Used to test if a sequence (such as a string, list, or tuple) contains a specific value
+- 'in' : Returns True if the value is present in the sequence.
+- 'not in' : Returns True if the value is not present in the sequence.
+
+7. Bitwise Operators  
+Used to perform operations on binary numbers at the bit level
+- '&' (AND): Sets each bit to 1 if both bits are 1.
+- '|' (OR): Sets each bit to 1 if one of two bits is 1.
+- '^' (XOR): Sets each bit to 1 if only one of two bits is 1.
+- '~' (NOT): Inverts all the bits.
+- '<<' (Zero fill left shift): Shifts bits left by pushing zeros in from the right.
+- '>>' (Signed right shift): Shifts bits right.
 
 
 
 # Conditional Statements
+Conditional statements allow a program to make decisions and execute specific blocks of code based on whether a condition is True or False. Python relies on indentation (whitespace) to define the scope of these code blocks.
 
+1. The if Statement  
+The simplest form of a decision-making structure. It runs a block of code only if the specified condition evaluates to True.  
+```python
+age = 20
+if age >= 18:
+    print("You are an adult.")
+```
 
+2. The if-else Statement  
+Provides an alternative block of code that runs if the initial if condition evaluates to False.  
+```python
+score = 45
+if score >= 50:
+    print("You passed.")
+else:
+    print("You failed.")
+```
+
+3. The if-elif-else Chain  
+Used to check multiple distinct conditions in sequence. Python evaluates them from top to bottom and runs only the first block whose condition is True.  
+```python
+traffic_light = "yellow"
+
+if traffic_light == "red":
+    print("Stop.")
+elif traffic_light == "yellow":
+    print("Slow down.")
+else:
+    print("Go.")
+```
+
+4. Nested Conditional Statements  
+We can place an if statement inside another if statement to check for secondary conditions.  
+```python
+has_ticket = True
+has_id = False
+
+if has_ticket:
+    if has_id:
+        print("Welcome to the show!")
+    else:
+        print("Please show your ID.")
+else:
+    print("You need to buy a ticket.")
+```
+
+5. Inline If (Ternary Operator)  
+A compact way to write a simple if-else statement on a single line, often used for direct variable assignments.  
+```python
+status = "Adult" if age >= 18 else "Minor"
+```
 
 # Loops
+In Python, loops are used to repeat a block of code multiple times. There are two primary types of loops: for loops (for iterating over a sequence) and while loops (for repeating as long as a condition is true).
 
+1. Using for Loops (Definite Iteration)  
+Use a for loop when you know in advance how many times you want to execute a block of code, or when you want to step through a sequence like a list, string, or range.
+- Looping through a range of numbers:  
+```python
+for i in range(1, 5):
+    print(f"Count: {i}")
+```
+- Looping through a list:  
+```python
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+```
 
+2. Using while Loops (Indefinite Iteration)  
+Use a while loop when you want to repeat code until a specific condition changes. If the condition evaluates to False at the very start, the loop will never run.
+- Basic counter loop:  
+```python
+count = 1
+while count <= 3:
+    print(f"Iteration {count}")
+    count += 1
+```
+- Handling an infinite loop safely:  
+```python
+while True:
+    response = input("Type 'exit' to quit: ")
+    if response == "exit":
+        break
+```
+
+3. Loop Control Statements (break, continue, else)  
+- We can control the natural flow of a loop using specific keywords.
+- break: Exits the loop immediately.
+- continue: Skips the rest of the current iteration and jumps directly to the next one.
+- else: Executes a block of code only if the loop finished normally (without encountering a break statement).  
+```python
+for num in range(1, 6):
+    if num == 3:
+        continue  # Skips printing 3
+    if num == 5:
+        break     # Ends the loop when reaching 5
+    print(num)
+else:
+    print("Loop finished successfully!")  # Won't run because of the 'break'
+```
 
 # Exception Handling
 
